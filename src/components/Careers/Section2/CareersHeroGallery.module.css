@@ -1,0 +1,31 @@
+.div19Stretch {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Hero copy stays in padded joinTeamThat; gallery is a sibling with no horizontal inset */
+.joinTeamThatWithExternalGallery {
+  padding-bottom: 16px !important;
+}
+
+.heroGallerySlot {
+  align-self: stretch;
+  width: 100%;
+  max-width: none;
+  margin-top: 48px;
+  margin-bottom: 80px;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+@media (max-width: 809.98px) {
+  .div19Stretch {
+    height: min-content;
+  }
+
+  .heroGallerySlot {
+    margin-bottom: 60px;
+  }
+}

@@ -5598,6 +5598,8 @@
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
+  overflow-x: clip;
+  overflow-y: clip;
   gap: 10px;
   row-gap: 10px;
   column-gap: 10px;
@@ -5611,6 +5613,7 @@
   left: 80px;
   width: min-content;
   height: min-content;
+  will-change: transform;
   padding-top: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
@@ -5625,7 +5628,6 @@
   row-gap: 24px;
   column-gap: 24px;
   place-content: center;
-  transform: translateY(-50%);
 }
 
 .buildAIInfrastructure16 {
@@ -11823,7 +11825,34 @@
   border-top-right-radius: 99px;
   border-bottom-left-radius: 99px;
   border-bottom-right-radius: 99px;
+  color: rgb(23, 23, 23);
   cursor: pointer;
+  transition:
+    color 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+    background-color 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.white3:hover,
+.white3:focus-visible {
+  color: rgb(255, 255, 255);
+}
+
+.white3:hover .bookCall14,
+.white3:focus-visible .bookCall14 {
+  caret-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  text-decoration-color: rgb(255, 255, 255);
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  border-top-color: rgb(255, 255, 255);
+  border-right-color: rgb(255, 255, 255);
+  border-bottom-color: rgb(255, 255, 255);
+  border-left-color: rgb(255, 255, 255);
+  outline-color: rgb(255, 255, 255);
+}
+
+.white3 .icon17 {
+  color: inherit;
 }
 
 .buttonLabel5 {
@@ -12244,15 +12273,15 @@
 .privacyPolicyLink {
   padding: var(--framer-link-text-background-padding, initial);
   border-radius: var(--framer-link-text-background-radius, initial);
-  caret-color: rgb(72, 160, 255);
-  color: rgb(72, 160, 255);
+  caret-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   font-size: calc(
     var(--framer-blockquote-font-size, var(--framer-font-size, 16px)) *
       var(--framer-font-size-scale, 1)
   );
   --framer-font-size: 12px;
-  text-decoration-line: underline;
-  text-decoration-color: rgb(72, 160, 255);
+  text-decoration: none;
+  text-decoration-color: rgb(255, 255, 255);
   text-underline-offset: var(
     --framer-link-text-decoration-offset,
     var(
@@ -12260,13 +12289,13 @@
       var(--framer-text-decoration-offset, initial)
     )
   );
-  -webkit-text-fill-color: rgb(72, 160, 255);
-  -webkit-text-stroke-color: rgb(72, 160, 255);
-  border-top-color: rgb(72, 160, 255);
-  border-right-color: rgb(72, 160, 255);
-  border-bottom-color: rgb(72, 160, 255);
-  border-left-color: rgb(72, 160, 255);
-  outline-color: rgb(72, 160, 255);
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  border-top-color: rgb(255, 255, 255);
+  border-right-color: rgb(255, 255, 255);
+  border-bottom-color: rgb(255, 255, 255);
+  border-left-color: rgb(255, 255, 255);
+  outline-color: rgb(255, 255, 255);
   cursor: pointer;
   transition-property:
     color, text-decoration-color, text-decoration-thickness,
@@ -12359,15 +12388,15 @@
 .termsOfServiceLink {
   padding: var(--framer-link-text-background-padding, initial);
   border-radius: var(--framer-link-text-background-radius, initial);
-  caret-color: rgb(72, 160, 255);
-  color: rgb(72, 160, 255);
+  caret-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   font-size: calc(
     var(--framer-blockquote-font-size, var(--framer-font-size, 16px)) *
       var(--framer-font-size-scale, 1)
   );
   --framer-font-size: 12px;
-  text-decoration-line: underline;
-  text-decoration-color: rgb(72, 160, 255);
+  text-decoration: none;
+  text-decoration-color: rgb(255, 255, 255);
   text-underline-offset: var(
     --framer-link-text-decoration-offset,
     var(
@@ -12375,13 +12404,13 @@
       var(--framer-text-decoration-offset, initial)
     )
   );
-  -webkit-text-fill-color: rgb(72, 160, 255);
-  -webkit-text-stroke-color: rgb(72, 160, 255);
-  border-top-color: rgb(72, 160, 255);
-  border-right-color: rgb(72, 160, 255);
-  border-bottom-color: rgb(72, 160, 255);
-  border-left-color: rgb(72, 160, 255);
-  outline-color: rgb(72, 160, 255);
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  border-top-color: rgb(255, 255, 255);
+  border-right-color: rgb(255, 255, 255);
+  border-bottom-color: rgb(255, 255, 255);
+  border-left-color: rgb(255, 255, 255);
+  outline-color: rgb(255, 255, 255);
   cursor: pointer;
   transition-property:
     color, text-decoration-color, text-decoration-thickness,

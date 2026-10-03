@@ -1,5 +1,6 @@
 import styles from "./Section4.module.css";
 import { Image } from "../../../ui/Image";
+import { FounderNoteReveal } from "./FounderNoteReveal";
 
 export function Section4() {
   return (
@@ -21,7 +22,10 @@ export function Section4() {
                 </div>
               </div>
               <div className={styles.divider}></div>
-              <div className={styles.keptSeeingAmbitious}>
+              <div
+                className={styles.keptSeeingAmbitious}
+                data-founder-note-scroll-target={true}
+              >
                 <div className={styles.div42}>
                   <div className={styles.div41}></div>
                 </div>
@@ -31,7 +35,7 @@ export function Section4() {
                       styles.andWeReNotTryingToBeOneALotOfHouseholdNameTechCompaniesTodayAreSellingSoftwareToOtherSoftwareCompaniesDonTGetUsWrongThatSImportantAndImpactfulWorkWorkWeVeDoneOurselvesPreviouslyButItSNotWhatWeDoHereAtPerceptaTheWorldIsAtAnInflectionPointToDetermineIfAIWillActuallyHelpFixWhatSBrokenWeReTakingOnSomeOfTheMostPersistentChallengesOfTheLast50YearsInTheIndustriesThatAffectAllOfOurLivesAndWeThinkWeVeGotAGenerationalShotOurMultidisciplinaryApproachBlendsCuttingEdgeResearchProductAndEngineeringInEqualMeasureAndThroughOurRelationshipWithGeneralCatalystWeCanActuallyImplementSolutionsAtTheMostImpactfulAltitudesOnAnyGivenWeekYouLlFindUsOnsiteAtHospitalsInOhioShadowingEveryoneFromNursesToDoctorsToThePatientBedTransportersWheelingPeopleBackAndForthInTheERWeReSittingDownWithMissionDrivenLeadersTryingToMakeValueBasedCareForMedicaidAndMedicarePatientsSustainableForTheFirstTimeWeRePartneringWithAnthropicAndStateLeadersInMarylandToSpeedUpAccessToSNAPBenefitsAndOtherFormsOfGovernmentAssistanceWeReHelpingJanusHendersonInvestorsModernizeAssetManagementAcrossHundredsOfBillionsOfDollarsInCapitalOrWeReApplyingAdvancedModelingTechniquesToOptimizeComplexSupplyChainProblemsForGlobalBusinessesWePartnerDeeplyWithThePeopleWeReBuildingForAndThatSOurSuperpowerItKeepsUsGroundedInTheRealityOfTheSystemsTodayAndOurDreamsForTomorrowAllOfThisIsEqualPartsTerrifyingAndExhilaratingOurConfidenceIsNotRootedInUnfoundedHubrisOrSaviorismButInAnIntimateUnderstandingOfTheSystemsAtWorkAndWhatCanBePossibleWithTheTechnologyWeReBuildingWeReLookingForPeopleWhoAreDrivenByADeepOptimismTowardsTheFutureTheCuriosityToFigureOutHowToGetThereAndTheTenacityAndCraftToBuildItIfThatSoundsLikeYourKindOfThingWeThinkYouLlLikeItHere
                     }
                   >
-                    <p className={styles.keptSeeingAmbitious3} dir={"auto"}>
+                    <FounderNoteReveal className={styles.keptSeeingAmbitious3}>
                       <span className={styles.keptSeeingAmbitious4}>
                         I kept seeing ambitious companies move too slowly. They had real problems to
                         solve and real oppo
@@ -572,7 +576,7 @@ export function Section4() {
                         o
                       </span>
                       <span className={styles.rks}>rks.</span>
-                    </p>
+                    </FounderNoteReveal>
                   </div>
                 </div>
               </div>

@@ -2,9 +2,12 @@ import styles from "./Home.module.css";
 import { Image } from "../../../ui/Image";
 import Link from "next/link";
 import { BackArrowSection } from "../BackArrowSection";
+import { HomeLogoMarquee } from "../HomeLogoMarquee/HomeLogoMarquee";
 import { Nav } from "../Nav";
+import { IndustriesCardsTrack, IndustriesTabProvider } from "../Industries";
 import { NavigationBar } from "../NavigationBar";
 import { AboutUsSection } from "../AboutUsSection";
+import { FaqAccordion } from "../Faq";
 import { BookCallButton } from "@/components/BookCall";
 import { UnicornScene } from "@/components/Unicorn";
 
@@ -88,154 +91,7 @@ export function Home() {
               </div>
               <div className={styles.logo2} id={"nav-color"}>
                 <div className={styles.div24}>
-                  <ul className={styles.list} data-framecoded-motion={"r28"}>
-                    <li
-                      className={styles.item}
-                      aria-hidden={"false"}
-                      aria-posinset={1}
-                      aria-setsize={9}
-                    >
-                      <div className={styles.wrapper3}>
-                        <div className={styles.wLDDIdvV15gfvu11} aria-hidden={"true"}>
-                          <div className={styles.div20}>
-                            <span
-                              className={styles.icon3}
-                              data-framecoded-svg="true"
-                              aria-hidden="true"
-                              dangerouslySetInnerHTML={{
-                                __html:
-                                  '<svg viewBox="0 0 48 28" preserveAspectRatio="none" width="100%" height="100%" style="fill: rgb(23, 23, 23); stroke-width: 1px; stop-color: rgb(0, 0, 0); flood-color: rgb(0, 0, 0); font-family: sans-serif; font-size: 12px; font-weight: 400;"><use href="#svg-43744852_4661" style="fill: rgb(23, 23, 23); stroke-width: 1px; stop-color: rgb(0, 0, 0); flood-color: rgb(0, 0, 0); transform-origin: 0px 0px; font-family: sans-serif; font-size: 12px; font-weight: 400;"></use></svg>',
-                              }}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li
-                      className={styles.item2}
-                      aria-hidden={"false"}
-                      aria-posinset={2}
-                      aria-setsize={9}
-                      data-framecoded-state={"t0s59"}
-                    >
-                      <div className={styles.wrapper4}>
-                        <div className={styles.logo} aria-hidden={"true"}></div>
-                      </div>
-                    </li>
-                    <li
-                      className={styles.item3}
-                      aria-hidden={"false"}
-                      aria-posinset={3}
-                      aria-setsize={9}
-                      data-framecoded-state={"t4s2236"}
-                    >
-                      <div className={styles.wrapper5}>
-                        <div className={styles.tradeseaIdjQpiXTTL11} aria-hidden={"true"}></div>
-                      </div>
-                    </li>
-                    <li
-                      className={styles.item4}
-                      aria-hidden={"false"}
-                      aria-posinset={4}
-                      aria-setsize={9}
-                    >
-                      <div className={styles.wrapper6}>
-                        <div className={styles.group} aria-hidden={"true"}></div>
-                      </div>
-                    </li>
-                    <li
-                      className={styles.item5}
-                      aria-hidden={"false"}
-                      aria-posinset={5}
-                      aria-setsize={9}
-                    >
-                      <div className={styles.wrapper7}>
-                        <div className={styles.logo22}>
-                          <div className={styles.div21}>
-                            <Image
-                              className={styles.image2}
-                              src={"/assets/mEikdX74659ygeDVgL3YzznDxs-1573e42413.png"}
-                              alt={"Image2"}
-                              width={427}
-                              height={112}
-                              srcSet={
-                                "/assets/mEikdX74659ygeDVgL3YzznDxs-4f2dfd32d6.png 214w, /assets/mEikdX74659ygeDVgL3YzznDxs-b0ab693a04.png 427w, /assets/mEikdX74659ygeDVgL3YzznDxs-a618b87a16.png 854w"
-                              }
-                              sizes={"(max-width: 427px) 100vw, 427px"}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li
-                      className={styles.item6}
-                      aria-hidden={"false"}
-                      aria-posinset={6}
-                      aria-setsize={9}
-                    >
-                      <div className={styles.wrapper8}>
-                        <div className={styles.timberTalesLogoWhite2} aria-hidden={"true"}></div>
-                      </div>
-                    </li>
-                    <li
-                      className={styles.item7}
-                      aria-hidden={"false"}
-                      aria-posinset={7}
-                      aria-setsize={9}
-                    >
-                      <div className={styles.wrapper9}>
-                        <div className={styles.clipPathGroup} aria-hidden={"true"}></div>
-                      </div>
-                    </li>
-                    <li
-                      className={styles.item8}
-                      aria-hidden={"false"}
-                      aria-posinset={8}
-                      aria-setsize={9}
-                    >
-                      <div className={styles.wrapper10}>
-                        <div className={styles.pGLogoSvg2}>
-                          <div className={styles.div222}>
-                            <Image
-                              className={styles.image3}
-                              src={"/assets/rNK0W2ik9XlBWLkUceotouuD38-d30a0376bb.png"}
-                              alt={"Image3"}
-                              width={168}
-                              height={72}
-                              srcSet={
-                                "/assets/rNK0W2ik9XlBWLkUceotouuD38-affff0c30a.png 84w, /assets/rNK0W2ik9XlBWLkUceotouuD38-3a2364f1f3.png 168w, /assets/rNK0W2ik9XlBWLkUceotouuD38-ac3e9732c8.png 336w"
-                              }
-                              sizes={"(max-width: 168px) 100vw, 168px"}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li
-                      className={styles.item9}
-                      aria-hidden={"false"}
-                      aria-posinset={9}
-                      aria-setsize={9}
-                    >
-                      <div className={styles.wrapper11}>
-                        <div className={styles.screenshot20260521At63301PM1}>
-                          <div className={styles.div232}>
-                            <Image
-                              className={styles.image4}
-                              src={"/assets/uBMuGVKn1huNTHpeiep2UKtdpMg-54dc44e9c7.png"}
-                              alt={"Image4"}
-                              width={192}
-                              height={128}
-                              srcSet={
-                                "/assets/uBMuGVKn1huNTHpeiep2UKtdpMg-f790f35e28.png 96w, /assets/uBMuGVKn1huNTHpeiep2UKtdpMg-bd9b6fd6b7.png 192w, /assets/uBMuGVKn1huNTHpeiep2UKtdpMg-dd8993cb4f.png 384w"
-                              }
-                              sizes={"(max-width: 192px) 100vw, 192px"}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
+                  <HomeLogoMarquee />
                 </div>
                 <span> </span>
               </div>
@@ -996,483 +852,485 @@ export function Home() {
             </div>
             <div className={styles.div1202}>
               <div className={styles.div1192}>
-                <div className={styles.techDesktop}>
-                  <div className={styles.div713}>
-                    <NavigationBar />
-                  </div>
-                  <div className={styles.cardsWrapper}>
-                    <div className={styles.div1182}>
-                      <div className={styles.buildAIInfrastructure16}>
-                        <div className={styles.div723}>
-                          <Image
-                            className={styles.image123}
-                            src={"/assets/EXxUlsYmQcclvQRr6N5SeTobR8Q-1965652945.png"}
-                            alt={"Image123"}
-                            width={3840}
-                            height={1740}
-                            srcSet={
-                              "/assets/EXxUlsYmQcclvQRr6N5SeTobR8Q-3a4dd2ef5c.png 512w,/assets/EXxUlsYmQcclvQRr6N5SeTobR8Q-76c9d7f392.png 1024w,/assets/EXxUlsYmQcclvQRr6N5SeTobR8Q-8d28fc3cee.png 2048w,/assets/EXxUlsYmQcclvQRr6N5SeTobR8Q-1965652945.png 3840w"
-                            }
-                            sizes={
-                              "(min-width: 1440px) max(1280px, 100vw, 662px), (min-width: 810px) and (max-width: 1119.98px) max(1280px, 100vw, 662px), (max-width: 809.98px) max(1280px, calc(min(100vw, 1360px) - 32px), 662px), (min-width: 1120px) and (max-width: 1439.98px) max(1040px, 100vw, 662px)"
-                            }
-                          />
-                        </div>
-                        <div className={styles.buildAIInfrastructure17}>
-                          <div className={styles.buildAIInfrastructure18}>
-                            <div className={styles.technology15}>
-                              <div className={styles.industryName23}>
-                                <div className={styles.industry23}>
-                                  <div className={styles.nameAndLogo23}>
-                                    <div className={styles.iconWrapper23}>
-                                      <div className={styles.div743}>
-                                        <div className={styles.div733}>
-                                          <Image
-                                            className={styles.image133}
-                                            src={
-                                              "/assets/AIOhBZBvjpIouK5lreNMqX8Uz4-467b723035.png"
-                                            }
-                                            alt={"Image133"}
-                                            width={72}
-                                            height={72}
-                                            srcSet={
-                                              "/assets/AIOhBZBvjpIouK5lreNMqX8Uz4-003fb63c1b.png 72w, /assets/AIOhBZBvjpIouK5lreNMqX8Uz4-040e5b8cc2.png 144w"
-                                            }
-                                            sizes={"(max-width: 72px) 100vw, 72px"}
-                                          />
+                <IndustriesTabProvider>
+                  <div className={styles.techDesktop}>
+                    <div className={styles.div713}>
+                      <NavigationBar />
+                    </div>
+                    <div className={styles.cardsWrapper}>
+                      <IndustriesCardsTrack className={styles.div1182}>
+                        <div className={styles.buildAIInfrastructure16}>
+                          <div className={styles.div723}>
+                            <Image
+                              className={styles.image123}
+                              src={"/assets/EXxUlsYmQcclvQRr6N5SeTobR8Q-1965652945.png"}
+                              alt={"Image123"}
+                              width={3840}
+                              height={1740}
+                              srcSet={
+                                "/assets/EXxUlsYmQcclvQRr6N5SeTobR8Q-3a4dd2ef5c.png 512w,/assets/EXxUlsYmQcclvQRr6N5SeTobR8Q-76c9d7f392.png 1024w,/assets/EXxUlsYmQcclvQRr6N5SeTobR8Q-8d28fc3cee.png 2048w,/assets/EXxUlsYmQcclvQRr6N5SeTobR8Q-1965652945.png 3840w"
+                              }
+                              sizes={
+                                "(min-width: 1440px) max(1280px, 100vw, 662px), (min-width: 810px) and (max-width: 1119.98px) max(1280px, 100vw, 662px), (max-width: 809.98px) max(1280px, calc(min(100vw, 1360px) - 32px), 662px), (min-width: 1120px) and (max-width: 1439.98px) max(1040px, 100vw, 662px)"
+                              }
+                            />
+                          </div>
+                          <div className={styles.buildAIInfrastructure17}>
+                            <div className={styles.buildAIInfrastructure18}>
+                              <div className={styles.technology15}>
+                                <div className={styles.industryName23}>
+                                  <div className={styles.industry23}>
+                                    <div className={styles.nameAndLogo23}>
+                                      <div className={styles.iconWrapper23}>
+                                        <div className={styles.div743}>
+                                          <div className={styles.div733}>
+                                            <Image
+                                              className={styles.image133}
+                                              src={
+                                                "/assets/AIOhBZBvjpIouK5lreNMqX8Uz4-467b723035.png"
+                                              }
+                                              alt={"Image133"}
+                                              width={72}
+                                              height={72}
+                                              srcSet={
+                                                "/assets/AIOhBZBvjpIouK5lreNMqX8Uz4-003fb63c1b.png 72w, /assets/AIOhBZBvjpIouK5lreNMqX8Uz4-040e5b8cc2.png 144w"
+                                              }
+                                              sizes={"(max-width: 72px) 100vw, 72px"}
+                                            />
+                                          </div>
                                         </div>
                                       </div>
+                                      <div className={styles.finance30}>
+                                        <p className={styles.technology16} dir={"auto"}>
+                                          Technology
+                                        </p>
+                                      </div>
                                     </div>
-                                    <div className={styles.finance30}>
-                                      <p className={styles.technology16} dir={"auto"}>
-                                        Technology
-                                      </p>
+                                  </div>
+                                </div>
+                                <div
+                                  className={
+                                    styles.buildAISystemsThatStreamlineOperationsImproveDecisionMakingAndMaintainComplianceAcrossHighVolumeFinancialWorkflows23
+                                  }
+                                >
+                                  <p className={styles.buildAIInfrastructure19} dir={"auto"}>
+                                    Build AI infrastructure designed to scale with your products,
+                                    accelerate internal workflows, and integrate seamlessly into
+                                    existing systems.
+                                  </p>
+                                </div>
+                              </div>
+                              <div className={styles.divider18}></div>
+                              <div className={styles.div842}>
+                                <div className={styles.logoWrapper35}>
+                                  <div className={styles.div773}>
+                                    <div className={styles.div763}>
+                                      <Image
+                                        className={styles.image143}
+                                        src={"/assets/mgsE5DFTN6jbXc3gzpCgKBCJQ-3af679af96.png"}
+                                        alt={"Image143"}
+                                        width={327}
+                                        height={96}
+                                        srcSet={
+                                          "/assets/mgsE5DFTN6jbXc3gzpCgKBCJQ-df0ee9f04e.png 164w, /assets/mgsE5DFTN6jbXc3gzpCgKBCJQ-161123fa74.png 327w, /assets/mgsE5DFTN6jbXc3gzpCgKBCJQ-47d7284909.png 654w"
+                                        }
+                                        sizes={"(max-width: 327px) 100vw, 327px"}
+                                      />
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div
-                                className={
-                                  styles.buildAISystemsThatStreamlineOperationsImproveDecisionMakingAndMaintainComplianceAcrossHighVolumeFinancialWorkflows23
-                                }
-                              >
-                                <p className={styles.buildAIInfrastructure19} dir={"auto"}>
-                                  Build AI infrastructure designed to scale with your products,
-                                  accelerate internal workflows, and integrate seamlessly into
-                                  existing systems.
-                                </p>
-                              </div>
-                            </div>
-                            <div className={styles.divider18}></div>
-                            <div className={styles.div842}>
-                              <div className={styles.logoWrapper35}>
-                                <div className={styles.div773}>
-                                  <div className={styles.div763}>
-                                    <Image
-                                      className={styles.image143}
-                                      src={"/assets/mgsE5DFTN6jbXc3gzpCgKBCJQ-3af679af96.png"}
-                                      alt={"Image143"}
-                                      width={327}
-                                      height={96}
-                                      srcSet={
-                                        "/assets/mgsE5DFTN6jbXc3gzpCgKBCJQ-df0ee9f04e.png 164w, /assets/mgsE5DFTN6jbXc3gzpCgKBCJQ-161123fa74.png 327w, /assets/mgsE5DFTN6jbXc3gzpCgKBCJQ-47d7284909.png 654w"
-                                      }
-                                      sizes={"(max-width: 327px) 100vw, 327px"}
-                                    />
+                                <div className={styles.logoWrapper211}>
+                                  <div className={styles.div79}>
+                                    <div className={styles.div783}>
+                                      <Image
+                                        className={styles.image153}
+                                        src={"/assets/FSMwodUA5NzXtpGIl3zy3WDYA-1cb7bc8d89.png"}
+                                        alt={"Image153"}
+                                        width={447}
+                                        height={96}
+                                        srcSet={
+                                          "/assets/FSMwodUA5NzXtpGIl3zy3WDYA-f02899c282.png 224w, /assets/FSMwodUA5NzXtpGIl3zy3WDYA-5f76de1224.png 447w, /assets/FSMwodUA5NzXtpGIl3zy3WDYA-257ad3586a.png 894w"
+                                        }
+                                        sizes={"(max-width: 447px) 100vw, 447px"}
+                                      />
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div className={styles.logoWrapper211}>
-                                <div className={styles.div79}>
-                                  <div className={styles.div783}>
-                                    <Image
-                                      className={styles.image153}
-                                      src={"/assets/FSMwodUA5NzXtpGIl3zy3WDYA-1cb7bc8d89.png"}
-                                      alt={"Image153"}
-                                      width={447}
-                                      height={96}
-                                      srcSet={
-                                        "/assets/FSMwodUA5NzXtpGIl3zy3WDYA-f02899c282.png 224w, /assets/FSMwodUA5NzXtpGIl3zy3WDYA-5f76de1224.png 447w, /assets/FSMwodUA5NzXtpGIl3zy3WDYA-257ad3586a.png 894w"
-                                      }
-                                      sizes={"(max-width: 447px) 100vw, 447px"}
-                                    />
+                                <div className={styles.logoWrapper36}>
+                                  <div className={styles.div813}>
+                                    <div className={styles.div803}>
+                                      <Image
+                                        className={styles.image163}
+                                        src={"/assets/ahzRZWJZiFOMCYfZ3hCxQilHI-6d459b8894.png"}
+                                        alt={"Image163"}
+                                        width={189}
+                                        height={96}
+                                        srcSet={
+                                          "/assets/ahzRZWJZiFOMCYfZ3hCxQilHI-51db2c3594.png 95w, /assets/ahzRZWJZiFOMCYfZ3hCxQilHI-d5de7e5080.png 189w, /assets/ahzRZWJZiFOMCYfZ3hCxQilHI-bcb43682c7.png 378w"
+                                        }
+                                        sizes={"(max-width: 189px) 100vw, 189px"}
+                                      />
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div className={styles.logoWrapper36}>
-                                <div className={styles.div813}>
-                                  <div className={styles.div803}>
-                                    <Image
-                                      className={styles.image163}
-                                      src={"/assets/ahzRZWJZiFOMCYfZ3hCxQilHI-6d459b8894.png"}
-                                      alt={"Image163"}
-                                      width={189}
-                                      height={96}
-                                      srcSet={
-                                        "/assets/ahzRZWJZiFOMCYfZ3hCxQilHI-51db2c3594.png 95w, /assets/ahzRZWJZiFOMCYfZ3hCxQilHI-d5de7e5080.png 189w, /assets/ahzRZWJZiFOMCYfZ3hCxQilHI-bcb43682c7.png 378w"
-                                      }
-                                      sizes={"(max-width: 189px) 100vw, 189px"}
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                              <div className={styles.logoWrapper43}>
-                                <div className={styles.div832}>
-                                  <div className={styles.div823}>
-                                    <Image
-                                      className={styles.image173}
-                                      src={"/assets/HfCjcxVpn8NhuI8kyDReAWtfuMc-7c2e4dd569.png"}
-                                      alt={"Image173"}
-                                      width={255}
-                                      height={96}
-                                      srcSet={
-                                        "/assets/HfCjcxVpn8NhuI8kyDReAWtfuMc-23e4d1de8f.png 128w, /assets/HfCjcxVpn8NhuI8kyDReAWtfuMc-32cf51b8b8.png 255w, /assets/HfCjcxVpn8NhuI8kyDReAWtfuMc-4510b09383.png 510w"
-                                      }
-                                      sizes={"(max-width: 255px) 100vw, 255px"}
-                                    />
+                                <div className={styles.logoWrapper43}>
+                                  <div className={styles.div832}>
+                                    <div className={styles.div823}>
+                                      <Image
+                                        className={styles.image173}
+                                        src={"/assets/HfCjcxVpn8NhuI8kyDReAWtfuMc-7c2e4dd569.png"}
+                                        alt={"Image173"}
+                                        width={255}
+                                        height={96}
+                                        srcSet={
+                                          "/assets/HfCjcxVpn8NhuI8kyDReAWtfuMc-23e4d1de8f.png 128w, /assets/HfCjcxVpn8NhuI8kyDReAWtfuMc-32cf51b8b8.png 255w, /assets/HfCjcxVpn8NhuI8kyDReAWtfuMc-4510b09383.png 510w"
+                                        }
+                                        sizes={"(max-width: 255px) 100vw, 255px"}
+                                      />
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div className={styles.buildAISystems16}>
-                        <div className={styles.div863}>
-                          <Image
-                            className={styles.image183}
-                            src={"/assets/RHkL1niKNJsOs6v86xwuymBivd8-cdc96f189d.png"}
-                            alt={"Image183"}
-                            width={3840}
-                            height={1740}
-                            srcSet={
-                              "/assets/RHkL1niKNJsOs6v86xwuymBivd8-dde20587ec.png 512w,/assets/RHkL1niKNJsOs6v86xwuymBivd8-6ebb369027.png 1024w,/assets/RHkL1niKNJsOs6v86xwuymBivd8-f5d4f41a0f.png 2048w,/assets/RHkL1niKNJsOs6v86xwuymBivd8-cdc96f189d.png 3840w"
-                            }
-                            sizes={
-                              "(min-width: 1440px) max(1280px, 100vw, 662px), (min-width: 810px) and (max-width: 1119.98px) max(1280px, 100vw, 662px), (max-width: 809.98px) max(1280px, calc(min(100vw, 1360px) - 32px), 662px), (min-width: 1120px) and (max-width: 1439.98px) max(1040px, 100vw, 662px)"
-                            }
-                          />
-                        </div>
-                        <div className={styles.buildAISystems17}>
-                          <div className={styles.buildAISystems18}>
-                            <div className={styles.finance172}>
-                              <div className={styles.industryName24}>
-                                <div className={styles.industry24}>
-                                  <div className={styles.nameAndLogo24}>
-                                    <div className={styles.iconWrapper24}>
-                                      <div className={styles.div883}>
-                                        <div className={styles.div872}>
-                                          <Image
-                                            className={styles.image193}
-                                            src={"/assets/GVLCWrjBuKtzgZ01YKBfdaX0-9c24dfd3dd.png"}
-                                            alt={"Image193"}
-                                            width={72}
-                                            height={72}
-                                            srcSet={
-                                              "/assets/GVLCWrjBuKtzgZ01YKBfdaX0-5e611e7b00.png 72w, /assets/GVLCWrjBuKtzgZ01YKBfdaX0-37a65745f5.png 144w"
-                                            }
-                                            sizes={"(max-width: 72px) 100vw, 72px"}
-                                          />
+                        <div className={styles.buildAISystems16}>
+                          <div className={styles.div863}>
+                            <Image
+                              className={styles.image183}
+                              src={"/assets/RHkL1niKNJsOs6v86xwuymBivd8-cdc96f189d.png"}
+                              alt={"Image183"}
+                              width={3840}
+                              height={1740}
+                              srcSet={
+                                "/assets/RHkL1niKNJsOs6v86xwuymBivd8-dde20587ec.png 512w,/assets/RHkL1niKNJsOs6v86xwuymBivd8-6ebb369027.png 1024w,/assets/RHkL1niKNJsOs6v86xwuymBivd8-f5d4f41a0f.png 2048w,/assets/RHkL1niKNJsOs6v86xwuymBivd8-cdc96f189d.png 3840w"
+                              }
+                              sizes={
+                                "(min-width: 1440px) max(1280px, 100vw, 662px), (min-width: 810px) and (max-width: 1119.98px) max(1280px, 100vw, 662px), (max-width: 809.98px) max(1280px, calc(min(100vw, 1360px) - 32px), 662px), (min-width: 1120px) and (max-width: 1439.98px) max(1040px, 100vw, 662px)"
+                              }
+                            />
+                          </div>
+                          <div className={styles.buildAISystems17}>
+                            <div className={styles.buildAISystems18}>
+                              <div className={styles.finance172}>
+                                <div className={styles.industryName24}>
+                                  <div className={styles.industry24}>
+                                    <div className={styles.nameAndLogo24}>
+                                      <div className={styles.iconWrapper24}>
+                                        <div className={styles.div883}>
+                                          <div className={styles.div872}>
+                                            <Image
+                                              className={styles.image193}
+                                              src={"/assets/GVLCWrjBuKtzgZ01YKBfdaX0-9c24dfd3dd.png"}
+                                              alt={"Image193"}
+                                              width={72}
+                                              height={72}
+                                              srcSet={
+                                                "/assets/GVLCWrjBuKtzgZ01YKBfdaX0-5e611e7b00.png 72w, /assets/GVLCWrjBuKtzgZ01YKBfdaX0-37a65745f5.png 144w"
+                                              }
+                                              sizes={"(max-width: 72px) 100vw, 72px"}
+                                            />
+                                          </div>
                                         </div>
                                       </div>
-                                    </div>
-                                    <div className={styles.finance211}>
-                                      <p className={styles.finance182} dir={"auto"}>
-                                        Finance
-                                      </p>
+                                      <div className={styles.finance211}>
+                                        <p className={styles.finance182} dir={"auto"}>
+                                          Finance
+                                        </p>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
+                                <div
+                                  className={
+                                    styles.buildAISystemsThatStreamlineOperationsImproveDecisionMakingAndMaintainComplianceAcrossHighVolumeFinancialWorkflows24
+                                  }
+                                >
+                                  <p className={styles.buildAISystems19} dir={"auto"}>
+                                    Build AI systems that streamline operations, improve
+                                    decision-making, and maintain compliance across high-volume
+                                    financial workflows.
+                                  </p>
+                                </div>
                               </div>
-                              <div
-                                className={
-                                  styles.buildAISystemsThatStreamlineOperationsImproveDecisionMakingAndMaintainComplianceAcrossHighVolumeFinancialWorkflows24
-                                }
-                              >
-                                <p className={styles.buildAISystems19} dir={"auto"}>
-                                  Build AI systems that streamline operations, improve
-                                  decision-making, and maintain compliance across high-volume
-                                  financial workflows.
-                                </p>
-                              </div>
-                            </div>
-                            <div className={styles.divider23}></div>
-                            <div className={styles.div923}>
-                              <div className={styles.logoWrapper53}>
-                                <div className={styles.div913}>
-                                  <div className={styles.div903}>
-                                    <Image
-                                      className={styles.image203}
-                                      src={"/assets/IATU3ACqrZe5XRG0vpkqVCQ0zmE-0bf698ca02.png"}
-                                      alt={"Image203"}
-                                      width={355}
-                                      height={96}
-                                      srcSet={
-                                        "/assets/IATU3ACqrZe5XRG0vpkqVCQ0zmE-58ceb67c32.png 178w, /assets/IATU3ACqrZe5XRG0vpkqVCQ0zmE-0441c99708.png 355w, /assets/IATU3ACqrZe5XRG0vpkqVCQ0zmE-80062c6132.png 710w"
-                                      }
-                                      sizes={"(max-width: 355px) 100vw, 355px"}
-                                    />
+                              <div className={styles.divider23}></div>
+                              <div className={styles.div923}>
+                                <div className={styles.logoWrapper53}>
+                                  <div className={styles.div913}>
+                                    <div className={styles.div903}>
+                                      <Image
+                                        className={styles.image203}
+                                        src={"/assets/IATU3ACqrZe5XRG0vpkqVCQ0zmE-0bf698ca02.png"}
+                                        alt={"Image203"}
+                                        width={355}
+                                        height={96}
+                                        srcSet={
+                                          "/assets/IATU3ACqrZe5XRG0vpkqVCQ0zmE-58ceb67c32.png 178w, /assets/IATU3ACqrZe5XRG0vpkqVCQ0zmE-0441c99708.png 355w, /assets/IATU3ACqrZe5XRG0vpkqVCQ0zmE-80062c6132.png 710w"
+                                        }
+                                        sizes={"(max-width: 355px) 100vw, 355px"}
+                                      />
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div className={styles.createIntelligentContent16}>
-                        <div className={styles.div942}>
-                          <Image
-                            className={styles.image213}
-                            src={"/assets/p0s6DSLv2G5YKr1g0KJZ3HCFSk-c8ab336554.png"}
-                            alt={"Image213"}
-                            width={3840}
-                            height={1740}
-                            srcSet={
-                              "/assets/p0s6DSLv2G5YKr1g0KJZ3HCFSk-244baf7003.png 512w,/assets/p0s6DSLv2G5YKr1g0KJZ3HCFSk-f71915f7a5.png 1024w,/assets/p0s6DSLv2G5YKr1g0KJZ3HCFSk-937153352f.png 2048w,/assets/p0s6DSLv2G5YKr1g0KJZ3HCFSk-c8ab336554.png 3840w"
-                            }
-                            sizes={
-                              "(min-width: 1440px) max(1280px, 662px), (min-width: 810px) and (max-width: 1119.98px) max(1280px, 662px), (max-width: 809.98px) max(1280px, 662px), (min-width: 1120px) and (max-width: 1439.98px) max(1040px, 662px)"
-                            }
-                          />
-                        </div>
-                        <div className={styles.createIntelligentContent17}>
-                          <div className={styles.createIntelligentContent18}>
-                            <div className={styles.media15}>
-                              <div className={styles.industryName33}>
-                                <div className={styles.industry33}>
-                                  <div className={styles.nameAndLogo33}>
-                                    <div className={styles.iconWrapper33}>
-                                      <div className={styles.div963}>
-                                        <div className={styles.div953}>
-                                          <Image
-                                            className={styles.image223}
-                                            src={
-                                              "/assets/X59149fnlDCvQgZFmqPXXK8BGg-8decd6fa24.png"
-                                            }
-                                            alt={"Image223"}
-                                            width={72}
-                                            height={72}
-                                            srcSet={
-                                              "/assets/X59149fnlDCvQgZFmqPXXK8BGg-02f99a176a.png 72w, /assets/X59149fnlDCvQgZFmqPXXK8BGg-fa27e1948b.png 144w"
-                                            }
-                                            sizes={"(max-width: 72px) 100vw, 72px"}
-                                          />
+                        <div className={styles.createIntelligentContent16}>
+                          <div className={styles.div942}>
+                            <Image
+                              className={styles.image213}
+                              src={"/assets/p0s6DSLv2G5YKr1g0KJZ3HCFSk-c8ab336554.png"}
+                              alt={"Image213"}
+                              width={3840}
+                              height={1740}
+                              srcSet={
+                                "/assets/p0s6DSLv2G5YKr1g0KJZ3HCFSk-244baf7003.png 512w,/assets/p0s6DSLv2G5YKr1g0KJZ3HCFSk-f71915f7a5.png 1024w,/assets/p0s6DSLv2G5YKr1g0KJZ3HCFSk-937153352f.png 2048w,/assets/p0s6DSLv2G5YKr1g0KJZ3HCFSk-c8ab336554.png 3840w"
+                              }
+                              sizes={
+                                "(min-width: 1440px) max(1280px, 662px), (min-width: 810px) and (max-width: 1119.98px) max(1280px, 662px), (max-width: 809.98px) max(1280px, 662px), (min-width: 1120px) and (max-width: 1439.98px) max(1040px, 662px)"
+                              }
+                            />
+                          </div>
+                          <div className={styles.createIntelligentContent17}>
+                            <div className={styles.createIntelligentContent18}>
+                              <div className={styles.media15}>
+                                <div className={styles.industryName33}>
+                                  <div className={styles.industry33}>
+                                    <div className={styles.nameAndLogo33}>
+                                      <div className={styles.iconWrapper33}>
+                                        <div className={styles.div963}>
+                                          <div className={styles.div953}>
+                                            <Image
+                                              className={styles.image223}
+                                              src={
+                                                "/assets/X59149fnlDCvQgZFmqPXXK8BGg-8decd6fa24.png"
+                                              }
+                                              alt={"Image223"}
+                                              width={72}
+                                              height={72}
+                                              srcSet={
+                                                "/assets/X59149fnlDCvQgZFmqPXXK8BGg-02f99a176a.png 72w, /assets/X59149fnlDCvQgZFmqPXXK8BGg-fa27e1948b.png 144w"
+                                              }
+                                              sizes={"(max-width: 72px) 100vw, 72px"}
+                                            />
+                                          </div>
                                         </div>
                                       </div>
-                                    </div>
-                                    <div className={styles.finance33}>
-                                      <p className={styles.media16} dir={"auto"}>
-                                        Media
-                                      </p>
+                                      <div className={styles.finance33}>
+                                        <p className={styles.media16} dir={"auto"}>
+                                          Media
+                                        </p>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div
-                                className={
-                                  styles.buildAISystemsThatStreamlineOperationsImproveDecisionMakingAndMaintainComplianceAcrossHighVolumeFinancialWorkflows33
-                                }
-                              >
-                                <p className={styles.createIntelligentContent19} dir={"auto"}>
-                                  Create intelligent content and distribution systems that
-                                  personalize experiences, streamline operations, and scale audience
-                                  engagement.
-                                </p>
-                              </div>
-                            </div>
-                            <div className={styles.divider33}></div>
-                            <div className={styles.div1023}>
-                              <div className={styles.logoWrapper63}>
-                                <div className={styles.div992}>
-                                  <div className={styles.div983}>
-                                    <Image
-                                      className={styles.image233}
-                                      src={"/assets/lVNG7NK7jkMRHJxmFHteB9hrY-233ea2d282.png"}
-                                      alt={"Image233"}
-                                      width={143}
-                                      height={96}
-                                      srcSet={
-                                        "/assets/lVNG7NK7jkMRHJxmFHteB9hrY-290918b9e3.png 72w, /assets/lVNG7NK7jkMRHJxmFHteB9hrY-9692ba1551.png 143w, /assets/lVNG7NK7jkMRHJxmFHteB9hrY-8dfe008f5e.png 286w"
-                                      }
-                                      sizes={"(max-width: 143px) 100vw, 143px"}
-                                    />
-                                  </div>
+                                <div
+                                  className={
+                                    styles.buildAISystemsThatStreamlineOperationsImproveDecisionMakingAndMaintainComplianceAcrossHighVolumeFinancialWorkflows33
+                                  }
+                                >
+                                  <p className={styles.createIntelligentContent19} dir={"auto"}>
+                                    Create intelligent content and distribution systems that
+                                    personalize experiences, streamline operations, and scale audience
+                                    engagement.
+                                  </p>
                                 </div>
                               </div>
-                              <div className={styles.logoWrapper73}>
-                                <div className={styles.div101}>
-                                  <div className={styles.div1003}>
-                                    <Image
-                                      className={styles.image243}
-                                      src={"/assets/93Ij9PUpdWuzLZzHidxc8MiX1g-b37a318ea6.png"}
-                                      alt={"Image243"}
-                                      width={831}
-                                      height={633}
-                                      srcSet={
-                                        "/assets/93Ij9PUpdWuzLZzHidxc8MiX1g-3a12161089.png 512w,/assets/93Ij9PUpdWuzLZzHidxc8MiX1g-b37a318ea6.png 831w"
-                                      }
-                                      sizes={
-                                        "(min-width: 1440px) 400px, (min-width: 810px) and (max-width: 1119.98px) 400px, (max-width: 809.98px) 400px, (min-width: 1120px) and (max-width: 1439.98px) 400px"
-                                      }
-                                    />
+                              <div className={styles.divider33}></div>
+                              <div className={styles.div1023}>
+                                <div className={styles.logoWrapper63}>
+                                  <div className={styles.div992}>
+                                    <div className={styles.div983}>
+                                      <Image
+                                        className={styles.image233}
+                                        src={"/assets/lVNG7NK7jkMRHJxmFHteB9hrY-233ea2d282.png"}
+                                        alt={"Image233"}
+                                        width={143}
+                                        height={96}
+                                        srcSet={
+                                          "/assets/lVNG7NK7jkMRHJxmFHteB9hrY-290918b9e3.png 72w, /assets/lVNG7NK7jkMRHJxmFHteB9hrY-9692ba1551.png 143w, /assets/lVNG7NK7jkMRHJxmFHteB9hrY-8dfe008f5e.png 286w"
+                                        }
+                                        sizes={"(max-width: 143px) 100vw, 143px"}
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className={styles.logoWrapper73}>
+                                  <div className={styles.div101}>
+                                    <div className={styles.div1003}>
+                                      <Image
+                                        className={styles.image243}
+                                        src={"/assets/93Ij9PUpdWuzLZzHidxc8MiX1g-b37a318ea6.png"}
+                                        alt={"Image243"}
+                                        width={831}
+                                        height={633}
+                                        srcSet={
+                                          "/assets/93Ij9PUpdWuzLZzHidxc8MiX1g-3a12161089.png 512w,/assets/93Ij9PUpdWuzLZzHidxc8MiX1g-b37a318ea6.png 831w"
+                                        }
+                                        sizes={
+                                          "(min-width: 1440px) 400px, (min-width: 810px) and (max-width: 1119.98px) 400px, (max-width: 809.98px) 400px, (min-width: 1120px) and (max-width: 1439.98px) 400px"
+                                        }
+                                      />
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div className={styles.deployIntelligentSystems16}>
-                        <div className={styles.div1043}>
-                          <Image
-                            className={styles.image253}
-                            src={"/assets/BcYNF3hi7B3gt3iHkqrzPBsfcg-78ec3fe773.png"}
-                            alt={"Image253"}
-                            width={3840}
-                            height={1740}
-                            srcSet={
-                              "/assets/BcYNF3hi7B3gt3iHkqrzPBsfcg-37f332baf2.png 512w,/assets/BcYNF3hi7B3gt3iHkqrzPBsfcg-14c45d1f9f.png 1024w,/assets/BcYNF3hi7B3gt3iHkqrzPBsfcg-fba51e2285.png 2048w,/assets/BcYNF3hi7B3gt3iHkqrzPBsfcg-78ec3fe773.png 3840w"
-                            }
-                            sizes={
-                              "(min-width: 1440px) max(1280px, 100vw, 662px), (min-width: 810px) and (max-width: 1119.98px) max(1280px, 100vw, 662px), (max-width: 809.98px) max(1280px, calc(min(100vw, 1360px) - 32px), 662px), (min-width: 1120px) and (max-width: 1439.98px) max(1040px, 100vw, 662px)"
-                            }
-                          />
-                        </div>
-                        <div className={styles.deployIntelligentSystems17}>
-                          <div className={styles.deployIntelligentSystems18}>
-                            <div className={styles.healthcare15}>
-                              <div className={styles.industryName43}>
-                                <div className={styles.industry43}>
-                                  <div className={styles.nameAndLogo43}>
-                                    <div className={styles.iconWrapper43}>
-                                      <div className={styles.div1062}>
-                                        <div className={styles.div1052}>
-                                          <Image
-                                            className={styles.image263}
-                                            src={
-                                              "/assets/d4Z5cotE1CqD8IxvojjSI40fqEg-87a7fed0c9.png"
-                                            }
-                                            alt={"Image263"}
-                                            width={72}
-                                            height={72}
-                                            srcSet={
-                                              "/assets/d4Z5cotE1CqD8IxvojjSI40fqEg-a9091ca0bb.png 72w, /assets/d4Z5cotE1CqD8IxvojjSI40fqEg-9712950662.png 144w"
-                                            }
-                                            sizes={"(max-width: 72px) 100vw, 72px"}
-                                          />
+                        <div className={styles.deployIntelligentSystems16}>
+                          <div className={styles.div1043}>
+                            <Image
+                              className={styles.image253}
+                              src={"/assets/BcYNF3hi7B3gt3iHkqrzPBsfcg-78ec3fe773.png"}
+                              alt={"Image253"}
+                              width={3840}
+                              height={1740}
+                              srcSet={
+                                "/assets/BcYNF3hi7B3gt3iHkqrzPBsfcg-37f332baf2.png 512w,/assets/BcYNF3hi7B3gt3iHkqrzPBsfcg-14c45d1f9f.png 1024w,/assets/BcYNF3hi7B3gt3iHkqrzPBsfcg-fba51e2285.png 2048w,/assets/BcYNF3hi7B3gt3iHkqrzPBsfcg-78ec3fe773.png 3840w"
+                              }
+                              sizes={
+                                "(min-width: 1440px) max(1280px, 100vw, 662px), (min-width: 810px) and (max-width: 1119.98px) max(1280px, 100vw, 662px), (max-width: 809.98px) max(1280px, calc(min(100vw, 1360px) - 32px), 662px), (min-width: 1120px) and (max-width: 1439.98px) max(1040px, 100vw, 662px)"
+                              }
+                            />
+                          </div>
+                          <div className={styles.deployIntelligentSystems17}>
+                            <div className={styles.deployIntelligentSystems18}>
+                              <div className={styles.healthcare15}>
+                                <div className={styles.industryName43}>
+                                  <div className={styles.industry43}>
+                                    <div className={styles.nameAndLogo43}>
+                                      <div className={styles.iconWrapper43}>
+                                        <div className={styles.div1062}>
+                                          <div className={styles.div1052}>
+                                            <Image
+                                              className={styles.image263}
+                                              src={
+                                                "/assets/d4Z5cotE1CqD8IxvojjSI40fqEg-87a7fed0c9.png"
+                                              }
+                                              alt={"Image263"}
+                                              width={72}
+                                              height={72}
+                                              srcSet={
+                                                "/assets/d4Z5cotE1CqD8IxvojjSI40fqEg-a9091ca0bb.png 72w, /assets/d4Z5cotE1CqD8IxvojjSI40fqEg-9712950662.png 144w"
+                                              }
+                                              sizes={"(max-width: 72px) 100vw, 72px"}
+                                            />
+                                          </div>
                                         </div>
                                       </div>
-                                    </div>
-                                    <div className={styles.finance44}>
-                                      <p className={styles.healthcare16} dir={"auto"}>
-                                        Healthcare
-                                      </p>
+                                      <div className={styles.finance44}>
+                                        <p className={styles.healthcare16} dir={"auto"}>
+                                          Healthcare
+                                        </p>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
+                                <div
+                                  className={
+                                    styles.buildAISystemsThatStreamlineOperationsImproveDecisionMakingAndMaintainComplianceAcrossHighVolumeFinancialWorkflows43
+                                  }
+                                >
+                                  <p className={styles.deployIntelligentSystems19} dir={"auto"}>
+                                    Deploy intelligent systems that reduce administrative burden,
+                                    improve patient operations, and support teams with reliable
+                                    clinical workflows.
+                                  </p>
+                                </div>
                               </div>
-                              <div
-                                className={
-                                  styles.buildAISystemsThatStreamlineOperationsImproveDecisionMakingAndMaintainComplianceAcrossHighVolumeFinancialWorkflows43
-                                }
-                              >
-                                <p className={styles.deployIntelligentSystems19} dir={"auto"}>
-                                  Deploy intelligent systems that reduce administrative burden,
-                                  improve patient operations, and support teams with reliable
-                                  clinical workflows.
-                                </p>
-                              </div>
-                            </div>
-                            <div className={styles.divider43}></div>
-                            <div className={styles.div1103}>
-                              <div className={styles.logoWrapper83}>
-                                <div className={styles.div1093}>
-                                  <div className={styles.div1083}>
-                                    <Image
-                                      className={styles.image273}
-                                      src={"/assets/otEpN7EEK71uyutZMRR8ovovxms-db39c558b9.png"}
-                                      alt={"Image273"}
-                                      width={399}
-                                      height={96}
-                                      srcSet={
-                                        "/assets/otEpN7EEK71uyutZMRR8ovovxms-4f0842861b.png 200w, /assets/otEpN7EEK71uyutZMRR8ovovxms-c227e77707.png 399w, /assets/otEpN7EEK71uyutZMRR8ovovxms-ef3393bae7.png 798w"
-                                      }
-                                      sizes={"(max-width: 399px) 100vw, 399px"}
-                                    />
+                              <div className={styles.divider43}></div>
+                              <div className={styles.div1103}>
+                                <div className={styles.logoWrapper83}>
+                                  <div className={styles.div1093}>
+                                    <div className={styles.div1083}>
+                                      <Image
+                                        className={styles.image273}
+                                        src={"/assets/otEpN7EEK71uyutZMRR8ovovxms-db39c558b9.png"}
+                                        alt={"Image273"}
+                                        width={399}
+                                        height={96}
+                                        srcSet={
+                                          "/assets/otEpN7EEK71uyutZMRR8ovovxms-4f0842861b.png 200w, /assets/otEpN7EEK71uyutZMRR8ovovxms-c227e77707.png 399w, /assets/otEpN7EEK71uyutZMRR8ovovxms-ef3393bae7.png 798w"
+                                        }
+                                        sizes={"(max-width: 399px) 100vw, 399px"}
+                                      />
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div className={styles.optimizeProductionWorkflows16}>
-                        <div className={styles.div1122}>
-                          <Image
-                            className={styles.image283}
-                            src={"/assets/ccGEvkSpJJXcXqlILI4b3xttM-a7173ee00b.png"}
-                            alt={"Image283"}
-                            width={3840}
-                            height={1740}
-                            srcSet={
-                              "/assets/ccGEvkSpJJXcXqlILI4b3xttM-d6e6cdfc76.png 512w,/assets/ccGEvkSpJJXcXqlILI4b3xttM-33facd9d7d.png 1024w,/assets/ccGEvkSpJJXcXqlILI4b3xttM-0e702f1aca.png 2048w,/assets/ccGEvkSpJJXcXqlILI4b3xttM-a7173ee00b.png 3840w"
-                            }
-                            sizes={
-                              "(min-width: 1440px) max(1280px, 100vw, 662px), (min-width: 810px) and (max-width: 1119.98px) max(1280px, 100vw, 662px), (max-width: 809.98px) max(1280px, calc(min(100vw, 1360px) - 32px), 662px), (min-width: 1120px) and (max-width: 1439.98px) max(1040px, 100vw, 662px)"
-                            }
-                          />
-                        </div>
-                        <div className={styles.optimizeProductionWorkflows17}>
-                          <div className={styles.optimizeProductionWorkflows18}>
-                            <div className={styles.manufacturing15}>
-                              <div className={styles.industryName53}>
-                                <div className={styles.industry53}>
-                                  <div className={styles.nameAndLogo53}>
-                                    <div className={styles.iconWrapper53}>
-                                      <div className={styles.div1142}>
-                                        <div className={styles.div1133}>
-                                          <Image
-                                            className={styles.image293}
-                                            src={
-                                              "/assets/1uWdUvb8yLb2IHLuYgOSPLmT8zI-2a24af549d.png"
-                                            }
-                                            alt={"Image293"}
-                                            width={72}
-                                            height={72}
-                                            srcSet={
-                                              "/assets/1uWdUvb8yLb2IHLuYgOSPLmT8zI-7763b6990d.png 72w, /assets/1uWdUvb8yLb2IHLuYgOSPLmT8zI-b3c5925e95.png 144w"
-                                            }
-                                            sizes={"(max-width: 72px) 100vw, 72px"}
-                                          />
+                        <div className={styles.optimizeProductionWorkflows16}>
+                          <div className={styles.div1122}>
+                            <Image
+                              className={styles.image283}
+                              src={"/assets/ccGEvkSpJJXcXqlILI4b3xttM-a7173ee00b.png"}
+                              alt={"Image283"}
+                              width={3840}
+                              height={1740}
+                              srcSet={
+                                "/assets/ccGEvkSpJJXcXqlILI4b3xttM-d6e6cdfc76.png 512w,/assets/ccGEvkSpJJXcXqlILI4b3xttM-33facd9d7d.png 1024w,/assets/ccGEvkSpJJXcXqlILI4b3xttM-0e702f1aca.png 2048w,/assets/ccGEvkSpJJXcXqlILI4b3xttM-a7173ee00b.png 3840w"
+                              }
+                              sizes={
+                                "(min-width: 1440px) max(1280px, 100vw, 662px), (min-width: 810px) and (max-width: 1119.98px) max(1280px, 100vw, 662px), (max-width: 809.98px) max(1280px, calc(min(100vw, 1360px) - 32px), 662px), (min-width: 1120px) and (max-width: 1439.98px) max(1040px, 100vw, 662px)"
+                              }
+                            />
+                          </div>
+                          <div className={styles.optimizeProductionWorkflows17}>
+                            <div className={styles.optimizeProductionWorkflows18}>
+                              <div className={styles.manufacturing15}>
+                                <div className={styles.industryName53}>
+                                  <div className={styles.industry53}>
+                                    <div className={styles.nameAndLogo53}>
+                                      <div className={styles.iconWrapper53}>
+                                        <div className={styles.div1142}>
+                                          <div className={styles.div1133}>
+                                            <Image
+                                              className={styles.image293}
+                                              src={
+                                                "/assets/1uWdUvb8yLb2IHLuYgOSPLmT8zI-2a24af549d.png"
+                                              }
+                                              alt={"Image293"}
+                                              width={72}
+                                              height={72}
+                                              srcSet={
+                                                "/assets/1uWdUvb8yLb2IHLuYgOSPLmT8zI-7763b6990d.png 72w, /assets/1uWdUvb8yLb2IHLuYgOSPLmT8zI-b3c5925e95.png 144w"
+                                              }
+                                              sizes={"(max-width: 72px) 100vw, 72px"}
+                                            />
+                                          </div>
                                         </div>
                                       </div>
-                                    </div>
-                                    <div className={styles.finance54}>
-                                      <p className={styles.manufacturing16} dir={"auto"}>
-                                        Manufacturing
-                                      </p>
+                                      <div className={styles.finance54}>
+                                        <p className={styles.manufacturing16} dir={"auto"}>
+                                          Manufacturing
+                                        </p>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
+                                <div
+                                  className={
+                                    styles.buildAISystemsThatStreamlineOperationsImproveDecisionMakingAndMaintainComplianceAcrossHighVolumeFinancialWorkflows53
+                                  }
+                                >
+                                  <p className={styles.optimizeProductionWorkflows19} dir={"auto"}>
+                                    Optimize production workflows, operational visibility, and quality
+                                    control with systems engineered for speed, precision, and scale.
+                                  </p>
+                                </div>
                               </div>
-                              <div
-                                className={
-                                  styles.buildAISystemsThatStreamlineOperationsImproveDecisionMakingAndMaintainComplianceAcrossHighVolumeFinancialWorkflows53
-                                }
-                              >
-                                <p className={styles.optimizeProductionWorkflows19} dir={"auto"}>
-                                  Optimize production workflows, operational visibility, and quality
-                                  control with systems engineered for speed, precision, and scale.
-                                </p>
-                              </div>
+                              <div className={styles.div1162}></div>
                             </div>
-                            <div className={styles.div1162}></div>
                           </div>
                         </div>
-                      </div>
+                      </IndustriesCardsTrack>
                     </div>
                   </div>
-                </div>
+                </IndustriesTabProvider>
               </div>
             </div>
           </div>
@@ -1727,8 +1585,8 @@ export function Home() {
               </div>
             </div>
           </div>
-          <div className={styles.fAQs} id={"faq"} data-framecoded-state={"t0s420"}>
-            <div className={styles.frequentlyAsked} data-framecoded-state={"t0s421"}>
+          <div className={styles.fAQs} id={"faq"}>
+            <div className={styles.frequentlyAsked}>
               <div className={styles.headingWrapper}>
                 <div className={styles.frequentlyAsked2}>
                   <div className={styles.deployingAIToWorkAcrossYourOrganisation5}>
@@ -1771,198 +1629,8 @@ export function Home() {
                 </div>
               </div>
               <div className={styles.div1632}>
-                <div className={styles.div1622} data-framecoded-state={"t0s436"}>
-                  <div className={styles.allFAQs} data-framecoded-state={"t0s437"}>
-                    <div className={styles.whatHappensDuring} data-framecoded-state={"t0s438"}>
-                      <div
-                        className={styles.closed}
-                        data-framecoded-trigger={"t0"}
-                        aria-expanded={"false"}
-                        role={"button"}
-                        data-framecoded-state={"t0s439"}
-                      >
-                        <div
-                          className={styles.question}
-                          data-highlight={"true"}
-                          tabIndex={0}
-                          data-framecoded-state={"t0s440"}
-                        >
-                          <div className={styles.whatHappensDuring2}>
-                            <p className={styles.whatHappensDuring3} dir={"auto"}>
-                              What happens during a discovery call?
-                            </p>
-                          </div>
-                          <div
-                            className={styles.icon10}
-                            aria-hidden={"true"}
-                            data-framecoded-state={"t0s443"}
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className={styles.howLongDoes} data-framecoded-state={"t0s444"}>
-                      <div
-                        className={styles.closed2}
-                        data-framecoded-trigger={"t1"}
-                        aria-expanded={"false"}
-                        role={"button"}
-                        data-framecoded-state={"t1s993"}
-                      >
-                        <div
-                          className={styles.question2}
-                          data-highlight={"true"}
-                          tabIndex={0}
-                          data-framecoded-state={"t1s994"}
-                        >
-                          <div className={styles.howLongDoes2}>
-                            <p className={styles.howLongDoes3} dir={"auto"}>
-                              How long does an engagement take?
-                            </p>
-                          </div>
-                          <div
-                            className={styles.icon11}
-                            aria-hidden={"true"}
-                            data-framecoded-state={"t1s997"}
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className={styles.howMuchInvolvement} data-framecoded-state={"t0s450"}>
-                      <div
-                        className={styles.closed3}
-                        data-framecoded-trigger={"t2"}
-                        aria-expanded={"false"}
-                        role={"button"}
-                        data-framecoded-state={"t2s1537"}
-                      >
-                        <div
-                          className={styles.question3}
-                          data-highlight={"true"}
-                          tabIndex={0}
-                          data-framecoded-state={"t2s1538"}
-                        >
-                          <div className={styles.howMuchInvolvement2}>
-                            <p className={styles.howMuchInvolvement3} dir={"auto"}>
-                              How much involvement is required from our team?
-                            </p>
-                          </div>
-                          <div
-                            className={styles.icon12}
-                            aria-hidden={"true"}
-                            data-framecoded-state={"t2s1541"}
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className={styles.howDoesPricing} data-framecoded-state={"t0s456"}>
-                      <div
-                        className={styles.closed4}
-                        data-framecoded-trigger={"t3"}
-                        aria-expanded={"false"}
-                        role={"button"}
-                        data-framecoded-state={"t3s2078"}
-                      >
-                        <div
-                          className={styles.question4}
-                          data-highlight={"true"}
-                          tabIndex={0}
-                          data-framecoded-state={"t3s2079"}
-                        >
-                          <div className={styles.howDoesPricing2}>
-                            <p className={styles.howDoesPricing3} dir={"auto"}>
-                              How does pricing work?
-                            </p>
-                          </div>
-                          <div
-                            className={styles.icon13}
-                            aria-hidden={"true"}
-                            data-framecoded-state={"t3s2082"}
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className={styles.doYouStick} data-framecoded-state={"t0s462"}>
-                      <div
-                        className={styles.closed5}
-                        data-framecoded-trigger={"t4"}
-                        aria-expanded={"false"}
-                        role={"button"}
-                        data-framecoded-state={"t4s2616"}
-                      >
-                        <div
-                          className={styles.question5}
-                          data-highlight={"true"}
-                          tabIndex={0}
-                          data-framecoded-state={"t4s2617"}
-                        >
-                          <div className={styles.doYouStick2}>
-                            <p className={styles.doYouStick3} dir={"auto"}>
-                              Do you stick around after launch?
-                            </p>
-                          </div>
-                          <div
-                            className={styles.icon14}
-                            aria-hidden={"true"}
-                            data-framecoded-state={"t4s2620"}
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className={styles.doYouBuild} data-framecoded-state={"t0s468"}>
-                      <div
-                        className={styles.closed6}
-                        data-framecoded-trigger={"t5"}
-                        aria-expanded={"false"}
-                        role={"button"}
-                        data-framecoded-state={"t5s3150"}
-                      >
-                        <div
-                          className={styles.question6}
-                          data-highlight={"true"}
-                          tabIndex={0}
-                          data-framecoded-state={"t5s3151"}
-                        >
-                          <div className={styles.doYouBuild2}>
-                            <p className={styles.doYouBuild3} dir={"auto"}>
-                              Do you build AI systems?
-                            </p>
-                          </div>
-                          <div
-                            className={styles.icon15}
-                            aria-hidden={"true"}
-                            data-framecoded-state={"t5s3154"}
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className={styles.howDoYou} data-framecoded-state={"t0s474"}>
-                      <div
-                        className={styles.closed7}
-                        data-framecoded-trigger={"t6"}
-                        aria-expanded={"false"}
-                        role={"button"}
-                        data-framecoded-state={"t6s3681"}
-                      >
-                        <div
-                          className={styles.question7}
-                          data-highlight={"true"}
-                          tabIndex={0}
-                          data-framecoded-state={"t6s3682"}
-                        >
-                          <div className={styles.howDoYou2}>
-                            <p className={styles.howDoYou3} dir={"auto"}>
-                              How do you handle security and compliance?{" "}
-                            </p>
-                          </div>
-                          <div
-                            className={styles.icon16}
-                            aria-hidden={"true"}
-                            data-framecoded-state={"t6s3685"}
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div className={styles.div1622}>
+                  <FaqAccordion />
                 </div>
               </div>
             </div>
@@ -2018,15 +1686,23 @@ export function Home() {
                       </div>
                       <div className={styles.div171} aria-hidden={"true"}>
                         <div className={styles.div1702}>
-                          <span
+                          <svg
                             className={styles.icon17}
-                            data-framecoded-svg="true"
+                            viewBox="0 0 9 9"
+                            width={9}
+                            height={9}
+                            overflow="visible"
                             aria-hidden="true"
-                            dangerouslySetInnerHTML={{
-                              __html:
-                                '<svg preserveAspectRatio="none" width="100%" height="100%" style="fill: rgb(0, 0, 0); stroke-width: 1px; stop-color: rgb(0, 0, 0); flood-color: rgb(0, 0, 0); font-family: sans-serif; font-size: 12px; font-weight: 400;"><use href="#svg-707097840_304" style="fill: rgb(0, 0, 0); stroke-width: 1px; stop-color: rgb(0, 0, 0); flood-color: rgb(0, 0, 0); transform-origin: 0px 0px; font-family: sans-serif; font-size: 12px; font-weight: 400;"></use></svg>',
-                            }}
-                          />
+                          >
+                            <path
+                              d="M 0 0 L 9 0 L 9 9 M 0 9 L 9 0"
+                              fill="transparent"
+                              stroke="currentColor"
+                              strokeWidth={1.35}
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
                         </div>
                       </div>
                     </BookCallButton>

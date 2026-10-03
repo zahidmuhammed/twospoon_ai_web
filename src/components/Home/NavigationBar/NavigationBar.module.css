@@ -35,6 +35,24 @@
   flex-basis: 0px;
 }
 
+.activeDesktop,
+.inactiveDesktop,
+.inactiveDesktop2,
+.inactiveDesktop3,
+.inactiveDesktop4 {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  text-align: inherit;
+  appearance: none;
+  background: none;
+  transition:
+    background-color 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+    color 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
 .activeDesktop {
   padding: 0px;
   border-radius: 8px;

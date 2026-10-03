@@ -1,0 +1,21 @@
+/* Original div39 mask needs a full-width clip region (max 1200px) */
+.maskViewport {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.marqueeHost {
+  width: 100%;
+  min-width: 0;
+}
+
+.marqueeHost ul {
+  transform: none !important;
+  width: max-content !important;
+  max-width: none !important;
+  height: auto !important;
+}
+
+.marqueeHost li {
+  transform: none !important;
+}

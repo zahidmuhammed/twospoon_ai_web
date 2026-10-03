@@ -1,0 +1,174 @@
+"use client";
+
+import type { CSSProperties } from "react";
+import { useReducedMotion } from "motion/react";
+import { Image } from "@/ui/Image";
+import { Marquee } from "@/ui/Marquee";
+import { HOME_LOGO_MARQUEE_VARS } from "@/ui/MarqueeStrip/marqueePresets";
+import stripStyles from "@/ui/MarqueeStrip/MarqueeStrip.module.css";
+import hostStyles from "./HomeLogoMarquee.module.css";
+import styles from "../Home/Home.module.css";
+
+export function HomeLogoMarquee() {
+  const reduceMotion = useReducedMotion();
+  return (
+    <div className={hostStyles.marqueeHost}>
+      <Marquee
+        className={stripStyles.marquee}
+        pauseOnHover
+        play={!reduceMotion}
+        repeat={4}
+        style={HOME_LOGO_MARQUEE_VARS as CSSProperties}
+      >
+        <ul className={styles.list}>
+                    <li
+                      className={styles.item}
+                      aria-hidden={"false"}
+                      aria-posinset={1}
+                      aria-setsize={9}
+                    >
+                      <div className={styles.wrapper3}>
+                        <div className={styles.wLDDIdvV15gfvu11} aria-hidden={"true"}>
+                          <div className={styles.div20}>
+                            <span
+                              className={styles.icon3}
+                              data-framecoded-svg="true"
+                              aria-hidden="true"
+                              dangerouslySetInnerHTML={{
+                                __html:
+                                  '<svg viewBox="0 0 48 28" preserveAspectRatio="none" width="100%" height="100%" style="fill: rgb(23, 23, 23); stroke-width: 1px; stop-color: rgb(0, 0, 0); flood-color: rgb(0, 0, 0); font-family: sans-serif; font-size: 12px; font-weight: 400;"><use href="#svg-43744852_4661" style="fill: rgb(23, 23, 23); stroke-width: 1px; stop-color: rgb(0, 0, 0); flood-color: rgb(0, 0, 0); transform-origin: 0px 0px; font-family: sans-serif; font-size: 12px; font-weight: 400;"></use></svg>',
+                              }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      className={styles.item2}
+                      aria-hidden={"false"}
+                      aria-posinset={2}
+                      aria-setsize={9}
+                      data-framecoded-state={"t0s59"}
+                    >
+                      <div className={styles.wrapper4}>
+                        <div className={styles.logo} aria-hidden={"true"}></div>
+                      </div>
+                    </li>
+                    <li
+                      className={styles.item3}
+                      aria-hidden={"false"}
+                      aria-posinset={3}
+                      aria-setsize={9}
+                      data-framecoded-state={"t4s2236"}
+                    >
+                      <div className={styles.wrapper5}>
+                        <div className={styles.tradeseaIdjQpiXTTL11} aria-hidden={"true"}></div>
+                      </div>
+                    </li>
+                    <li
+                      className={styles.item4}
+                      aria-hidden={"false"}
+                      aria-posinset={4}
+                      aria-setsize={9}
+                    >
+                      <div className={styles.wrapper6}>
+                        <div className={styles.group} aria-hidden={"true"}></div>
+                      </div>
+                    </li>
+                    <li
+                      className={styles.item5}
+                      aria-hidden={"false"}
+                      aria-posinset={5}
+                      aria-setsize={9}
+                    >
+                      <div className={styles.wrapper7}>
+                        <div className={styles.logo22}>
+                          <div className={styles.div21}>
+                            <Image
+                              className={styles.image2}
+                              src={"/assets/mEikdX74659ygeDVgL3YzznDxs-1573e42413.png"}
+                              alt={"Image2"}
+                              width={427}
+                              height={112}
+                              srcSet={
+                                "/assets/mEikdX74659ygeDVgL3YzznDxs-4f2dfd32d6.png 214w, /assets/mEikdX74659ygeDVgL3YzznDxs-b0ab693a04.png 427w, /assets/mEikdX74659ygeDVgL3YzznDxs-a618b87a16.png 854w"
+                              }
+                              sizes={"(max-width: 427px) 100vw, 427px"}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      className={styles.item6}
+                      aria-hidden={"false"}
+                      aria-posinset={6}
+                      aria-setsize={9}
+                    >
+                      <div className={styles.wrapper8}>
+                        <div className={styles.timberTalesLogoWhite2} aria-hidden={"true"}></div>
+                      </div>
+                    </li>
+                    <li
+                      className={styles.item7}
+                      aria-hidden={"false"}
+                      aria-posinset={7}
+                      aria-setsize={9}
+                    >
+                      <div className={styles.wrapper9}>
+                        <div className={styles.clipPathGroup} aria-hidden={"true"}></div>
+                      </div>
+                    </li>
+                    <li
+                      className={styles.item8}
+                      aria-hidden={"false"}
+                      aria-posinset={8}
+                      aria-setsize={9}
+                    >
+                      <div className={styles.wrapper10}>
+                        <div className={styles.pGLogoSvg2}>
+                          <div className={styles.div222}>
+                            <Image
+                              className={styles.image3}
+                              src={"/assets/rNK0W2ik9XlBWLkUceotouuD38-d30a0376bb.png"}
+                              alt={"Image3"}
+                              width={168}
+                              height={72}
+                              srcSet={
+                                "/assets/rNK0W2ik9XlBWLkUceotouuD38-affff0c30a.png 84w, /assets/rNK0W2ik9XlBWLkUceotouuD38-3a2364f1f3.png 168w, /assets/rNK0W2ik9XlBWLkUceotouuD38-ac3e9732c8.png 336w"
+                              }
+                              sizes={"(max-width: 168px) 100vw, 168px"}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      className={styles.item9}
+                      aria-hidden={"false"}
+                      aria-posinset={9}
+                      aria-setsize={9}
+                    >
+                      <div className={styles.wrapper11}>
+                        <div className={styles.screenshot20260521At63301PM1}>
+                          <div className={styles.div232}>
+                            <Image
+                              className={styles.image4}
+                              src={"/assets/uBMuGVKn1huNTHpeiep2UKtdpMg-54dc44e9c7.png"}
+                              alt={"Image4"}
+                              width={192}
+                              height={128}
+                              srcSet={
+                                "/assets/uBMuGVKn1huNTHpeiep2UKtdpMg-f790f35e28.png 96w, /assets/uBMuGVKn1huNTHpeiep2UKtdpMg-bd9b6fd6b7.png 192w, /assets/uBMuGVKn1huNTHpeiep2UKtdpMg-dd8993cb4f.png 384w"
+                              }
+                              sizes={"(max-width: 192px) 100vw, 192px"}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+        </ul>
+      </Marquee>
+    </div>
+  );
+}

@@ -1,0 +1,16 @@
+.marqueeHost {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Keep div24 mask/opacity untouched; only neutralize Framer carousel offsets */
+.marqueeHost ul {
+  transform: none !important;
+  width: max-content !important;
+  max-width: none !important;
+  height: auto !important;
+}
+
+.marqueeHost li {
+  transform: none !important;
+}

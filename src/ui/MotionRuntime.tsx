@@ -332,6 +332,7 @@ export function MotionRuntime({
         "[data-framecoded-motion='" + id + "']",
       );
       for (const element of elements) {
+        if (element.closest("[data-founder-scroll-reveal]")) continue;
         for (const { motion, index: motionIndex } of activeMotions) {
           if (motion.trigger === "tap" && motion.source) {
             const list = tapMotions.get(motion.source) ?? [];
@@ -428,16 +429,40 @@ export function MotionRuntime({
           if (perpetual) {
             animation.pause();
             animation.currentTime = 0;
+            let visible = false;
+            let hovered = false;
+            const syncPerpetualPlayback = () => {
+              if (visible && !hovered) animation.play();
+              else animation.pause();
+            };
             const observer = new IntersectionObserver(
               (entries) => {
-                const visible = entries.some((entry) => entry.isIntersecting);
-                if (visible) animation.play();
-                else animation.pause();
+                visible = entries.some((entry) => entry.isIntersecting);
+                syncPerpetualPlayback();
               },
               { threshold: 0, rootMargin: "160px 0px" },
             );
             observer.observe(perpetualVisibilityTarget(element));
             observers.push(observer);
+
+            if (element.hasAttribute("data-motion-pause-hover")) {
+              const hoverRoot =
+                element.closest<HTMLElement>("[data-motion-hover-root]") ?? element;
+              const onPointerEnter = () => {
+                hovered = true;
+                syncPerpetualPlayback();
+              };
+              const onPointerLeave = () => {
+                hovered = false;
+                syncPerpetualPlayback();
+              };
+              hoverRoot.addEventListener("pointerenter", onPointerEnter);
+              hoverRoot.addEventListener("pointerleave", onPointerLeave);
+              listenerCleanups.push(() => {
+                hoverRoot.removeEventListener("pointerenter", onPointerEnter);
+                hoverRoot.removeEventListener("pointerleave", onPointerLeave);
+              });
+            }
             continue;
           }
 
@@ -494,7 +519,7 @@ export function MotionRuntime({
             Number.isFinite(range.startProgress) && Number.isFinite(range.endProgress);
           if (
             documentRelative &&
-            item.element.closest("#about-us") &&
+            item.element.closest("#about-us, #founder-note") &&
             Number.isFinite(range.startOffset) &&
             Number.isFinite(range.endOffset)
           ) {
@@ -746,16 +771,21 @@ export function MotionRuntime({
         let current = window.scrollY;
         let target = current;
         let scrollFrame = 0;
+        let anchorScroll = false;
+        const wheelScrollEase = 0.13;
+        const anchorScrollEase = 0.065;
 
         const maximumScroll = () =>
           Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
         const clampTarget = (value: number) => Math.min(maximumScroll(), Math.max(0, value));
         const renderScroll = () => {
-          current += (target - current) * 0.13;
+          const ease = anchorScroll ? anchorScrollEase : wheelScrollEase;
+          current += (target - current) * ease;
           if (Math.abs(target - current) < 0.5) current = target;
           window.scrollTo(0, current);
           if (current === target) {
             scrollFrame = 0;
+            anchorScroll = false;
           } else {
             scrollFrame = requestAnimationFrame(renderScroll);
           }
@@ -790,6 +820,7 @@ export function MotionRuntime({
           const delta = event.deltaY * scale;
           if (nestedScrollerCanMove(event.target, delta)) return;
           event.preventDefault();
+          anchorScroll = false;
           if (!scrollFrame) current = target = window.scrollY;
           target = clampTarget(target + delta);
           beginScroll();
@@ -827,6 +858,7 @@ export function MotionRuntime({
           const element = id ? document.getElementById(id) : document.documentElement;
           if (!element) return;
           event.preventDefault();
+          anchorScroll = true;
           current = window.scrollY;
           target = clampTarget(element.getBoundingClientRect().top + window.scrollY);
           if (window.location.hash !== destination.hash)
