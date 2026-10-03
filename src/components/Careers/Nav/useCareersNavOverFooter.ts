@@ -2,7 +2,9 @@
 
 import { useEffect, useState } from "react";
 
-const FOOTER_ID = "careers-footer-hero";
+import { FOOTER_HERO_ID_CAREERS } from "@/components/Footer";
+
+const FOOTER_ID = FOOTER_HERO_ID_CAREERS;
 const NAV_OVERLAP_PX = 88;
 
 /** True when the fixed careers nav sits over the blue footer hero. */

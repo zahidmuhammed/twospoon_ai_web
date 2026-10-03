@@ -3,7 +3,9 @@
 import { useSyncExternalStore } from "react";
 
 const HERO_ID = "home-hero";
-const FOOTER_ID = "home-footer-hero";
+import { FOOTER_HERO_ID_HOME } from "@/components/Footer";
+
+const FOOTER_ID = FOOTER_HERO_ID_HOME;
 const NAV_HEIGHT_PX = 88;
 
 export type HomeNavTheme = "hero" | "solid" | "footer";

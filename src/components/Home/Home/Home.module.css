@@ -11837,6 +11837,13 @@
   color: rgb(255, 255, 255);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .white3:hover,
+  .white3:focus-visible {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+
 .white3:hover .bookCall14,
 .white3:focus-visible .bookCall14 {
   caret-color: rgb(255, 255, 255);

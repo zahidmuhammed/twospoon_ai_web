@@ -4,8 +4,15 @@ import { siteAssetUrl, siteUrl } from "@/config/site";
 import { MotionRuntime } from "@/ui/MotionRuntime";
 import {
   motionDefinitions,
-  interactionDefinitions,
+  interactionDefinitions as careersInteractionDefinitions,
 } from "@/components/Careers/Careers/Careers.motion";
+import { interactionDefinitions as homeInteractionDefinitions } from "@/components/Home/Home/Home.motion";
+
+/** Footer `Book a call` uses home footer hover (semi-transparent white + label fade). */
+const interactionDefinitions = {
+  ...careersInteractionDefinitions,
+  h1bqx8fn: homeInteractionDefinitions.h1bqx8fn,
+};
 
 export const metadata: Metadata = {
   title: "Twospoon - AI-native engineering team that ships in weeks, not quarters",

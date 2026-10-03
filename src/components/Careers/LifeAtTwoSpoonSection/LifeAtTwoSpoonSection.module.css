@@ -334,6 +334,7 @@
   padding-left: 0px;
   overflow-x: clip;
   overflow-y: clip;
+  background-color: rgb(0, 0, 0);
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 0px;
@@ -401,7 +402,6 @@
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
-  opacity: 0;
 }
 
 .div83 {
@@ -444,7 +444,6 @@
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
-  opacity: 0;
 }
 
 .div84 {
@@ -487,7 +486,34 @@
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
+}
+
+.mainSlideLayer {
+  z-index: 1;
+}
+
+.mainSlideVisible {
+  opacity: 1;
+  z-index: 3;
+  transition: opacity 1.4s ease;
+}
+
+.mainSlideHidden {
   opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 1.4s ease;
+}
+
+.mainSlideLeaving {
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mainSlideVisible,
+  .mainSlideHidden {
+    transition: none;
+  }
 }
 
 .div85 {
@@ -524,7 +550,8 @@
   right: 0px;
   bottom: 0px;
   left: 0px;
-  z-index: 1;
+  z-index: 5;
+  pointer-events: none;
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
@@ -547,7 +574,8 @@
   padding-left: 0px;
   overflow-x: clip;
   overflow-y: clip;
-  z-index: 3;
+  z-index: 6;
+  pointer-events: none;
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: auto;
@@ -558,6 +586,14 @@
   row-gap: 10px;
   column-gap: 10px;
   place-content: center;
+}
+
+.thumbDimmed {
+  opacity: 0.7;
+}
+
+.thumbSelected {
+  opacity: 1;
 }
 
 .inactive {
@@ -665,6 +701,10 @@
   content: "";
 }
 
+.smallImagesWrapper > * {
+  pointer-events: auto;
+}
+
 .iMGWrapper2 {
   padding: 0px;
   display: flex;
@@ -679,7 +719,7 @@
   flex-shrink: 0;
   flex-basis: auto;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   align-content: center;
   gap: 10px;
   row-gap: 10px;
@@ -690,16 +730,25 @@
 .el24 {
   border-radius: 8px;
   position: relative;
-  width: 1px;
+  display: block;
+  width: 100%;
   height: 100%;
+  min-width: 0;
   flex-grow: 1;
-  flex-shrink: 0;
+  flex-shrink: 1;
   flex-basis: 0px;
+  overflow: hidden;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   cursor: pointer;
+  padding: 0px;
+  border-width: 0px;
+  border-style: none;
+  background: transparent;
+  font: inherit;
+  color: inherit;
 }
 
 .div86 {
@@ -848,7 +897,7 @@
   flex-shrink: 0;
   flex-basis: auto;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   align-content: center;
   gap: 10px;
   row-gap: 10px;
@@ -859,17 +908,25 @@
 .el25 {
   border-radius: 8px;
   position: relative;
-  width: 1px;
+  display: block;
+  width: 100%;
   height: 100%;
+  min-width: 0;
   flex-grow: 1;
-  flex-shrink: 0;
+  flex-shrink: 1;
   flex-basis: 0px;
+  overflow: hidden;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  opacity: 0.7;
   cursor: pointer;
+  padding: 0px;
+  border-width: 0px;
+  border-style: none;
+  background: transparent;
+  font: inherit;
+  color: inherit;
 }
 
 .div87 {
@@ -1018,7 +1075,7 @@
   flex-shrink: 0;
   flex-basis: auto;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   align-content: center;
   gap: 10px;
   row-gap: 10px;
@@ -1029,17 +1086,25 @@
 .el26 {
   border-radius: 8px;
   position: relative;
-  width: 1px;
+  display: block;
+  width: 100%;
   height: 100%;
+  min-width: 0;
   flex-grow: 1;
-  flex-shrink: 0;
+  flex-shrink: 1;
   flex-basis: 0px;
+  overflow: hidden;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  opacity: 0.7;
   cursor: pointer;
+  padding: 0px;
+  border-width: 0px;
+  border-style: none;
+  background: transparent;
+  font: inherit;
+  color: inherit;
 }
 
 .div88 {
@@ -1188,7 +1253,7 @@
   flex-shrink: 0;
   flex-basis: auto;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   align-content: center;
   gap: 10px;
   row-gap: 10px;
@@ -1199,17 +1264,25 @@
 .el27 {
   border-radius: 8px;
   position: relative;
-  width: 1px;
+  display: block;
+  width: 100%;
   height: 100%;
+  min-width: 0;
   flex-grow: 1;
-  flex-shrink: 0;
+  flex-shrink: 1;
   flex-basis: 0px;
+  overflow: hidden;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  opacity: 0.7;
   cursor: pointer;
+  padding: 0px;
+  border-width: 0px;
+  border-style: none;
+  background: transparent;
+  font: inherit;
+  color: inherit;
 }
 
 .div89 {
@@ -1300,9 +1373,6 @@
   }
   .div90 {
     height: 300px;
-  }
-  .overlay {
-    z-index: 3;
   }
   .smallImagesWrapper {
     right: 14px;
