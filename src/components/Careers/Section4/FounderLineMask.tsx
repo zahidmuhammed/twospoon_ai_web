@@ -24,11 +24,9 @@ export function FounderLineMask({
   const segmentStart = lineIndex / totalLines;
   const segmentEnd = (lineIndex + 1) / totalLines;
 
-  const x = useTransform(
-    scrollYProgress,
-    [segmentStart, segmentEnd],
-    [0, translateMax],
-  );
+  const x = useTransform(scrollYProgress, [segmentStart, segmentEnd], [0, translateMax], {
+    clamp: true,
+  });
 
   const style: CSSProperties = {
     top: `${top}px`,

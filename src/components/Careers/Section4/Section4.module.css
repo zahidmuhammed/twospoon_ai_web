@@ -419,6 +419,7 @@
 }
 
 .founderNoteRevealRoot span {
+  display: inline !important;
   opacity: 1;
 }
 
@@ -434,6 +435,7 @@
   opacity: 0.92;
   pointer-events: none;
   box-sizing: border-box;
+  backface-visibility: hidden;
 }
 
 .keptSeeingAmbitious3 {
