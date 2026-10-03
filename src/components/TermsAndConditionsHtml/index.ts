@@ -1,0 +1,1 @@
+export { TermsAndConditionsHtml } from "./TermsAndConditionsHtml";

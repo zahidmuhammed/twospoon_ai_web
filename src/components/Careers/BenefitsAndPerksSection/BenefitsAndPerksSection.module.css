@@ -1,0 +1,197 @@
+.benefitsAndPerksSection {
+  padding: 0px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: min-content;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  overflow-x: clip;
+  overflow-y: clip;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 24px;
+  row-gap: 24px;
+  column-gap: 24px;
+  place-content: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.benefitsAndPerks {
+  padding: 100px 40px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: min-content;
+  max-width: 1360px;
+  padding-top: 100px;
+  padding-right: 40px;
+  padding-bottom: 100px;
+  padding-left: 40px;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 60px;
+  row-gap: 60px;
+  column-gap: 60px;
+  place-content: flex-start;
+}
+
+.benefitsAndPerks2 {
+  padding: 0px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: min-content;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  overflow-x: clip;
+  overflow-y: clip;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 24px;
+  row-gap: 24px;
+  column-gap: 24px;
+  place-content: flex-start center;
+}
+
+.benefitsAndPerks3 {
+  display: contents;
+}
+
+.deployingAIToWorkAcrossYourOrganisation {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  justify-content: flex-start;
+  place-content: normal flex-start;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  outline-width: initial;
+  transform: none;
+}
+
+.benefitsAndPerks4 {
+  margin: 0px;
+  padding: var(
+    --framer-blockquote-text-background-padding,
+    var(--framer-text-background-padding, initial)
+  );
+  border-radius: var(
+    --framer-blockquote-text-background-radius,
+    var(--framer-text-background-radius, initial)
+  );
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  caret-color: rgb(23, 23, 23);
+  color: rgb(23, 23, 23);
+  font-family: "Neue Montreal Regular", "Neue Montreal Regular Placeholder", sans-serif;
+  font-size: calc(
+    var(--framer-blockquote-font-size, var(--framer-font-size, 16px)) *
+      var(--framer-font-size-scale, 1)
+  );
+  --framer-font-size: 48px;
+  line-height: var(--framer-blockquote-line-height, var(--framer-line-height, 1.2em));
+  --framer-line-height: 48px;
+  letter-spacing: var(--framer-blockquote-letter-spacing, var(--framer-letter-spacing, 0));
+  --framer-letter-spacing: -0.02em;
+  text-align: left;
+  text-decoration-color: rgb(23, 23, 23);
+  text-underline-offset: var(
+    --framer-blockquote-text-decoration-offset,
+    var(--framer-text-decoration-offset, initial)
+  );
+  -webkit-text-fill-color: rgb(23, 23, 23);
+  -webkit-text-stroke-color: rgb(23, 23, 23);
+  border-top-color: rgb(23, 23, 23);
+  border-right-color: rgb(23, 23, 23);
+  border-bottom-color: rgb(23, 23, 23);
+  border-left-color: rgb(23, 23, 23);
+  outline-color: rgb(23, 23, 23);
+  text-decoration-thickness: var(
+    --framer-blockquote-text-decoration-thickness,
+    var(--framer-text-decoration-thickness, initial)
+  );
+}
+
+.frame2147238986 {
+  padding: 0px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: min-content;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 12px;
+  row-gap: 12px;
+  column-gap: 12px;
+  place-content: flex-start;
+}
+
+@media (max-width: 1119px) {
+  .benefitsAndPerks {
+    padding: 100px 60px;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .frame2147238986 {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 809px) {
+  .benefitsAndPerks {
+    padding: 60px 16px;
+    padding-top: 60px;
+    padding-right: 16px;
+    padding-bottom: 60px;
+    padding-left: 16px;
+    gap: 40px;
+    row-gap: 40px;
+    column-gap: 40px;
+  }
+  .benefitsAndPerks4 {
+    --framer-font-size: 32px;
+    --framer-line-height: 100%;
+    font-size: var(--framer-font-size, 32px);
+    line-height: var(--framer-line-height, 100%);
+  }
+}
