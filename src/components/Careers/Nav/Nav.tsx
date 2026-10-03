@@ -1,9 +1,23 @@
+"use client";
+
 import styles from "./Nav.module.css";
 import { Image } from "../../../ui/Image";
 import Link from "next/link";
+import { BookCallButton } from "@/components/BookCall";
+import { useCareersNavOverFooter } from "./useCareersNavOverFooter";
+import { useCareersNavSolidBackground } from "./useCareersNavSolidBackground";
+
 export function Nav() {
+  const overFooter = useCareersNavOverFooter();
+  const solidBackground = useCareersNavSolidBackground();
+  const themeClass = overFooter ? styles.navThemeOnFooter : styles.navThemeOnContent;
+  const backgroundClass =
+    overFooter || !solidBackground
+      ? styles.navTransparentBackground
+      : styles.navSolidBackground;
+
   return (
-    <nav className={styles.nav}>
+    <nav className={`${styles.nav} ${themeClass} ${backgroundClass}`}>
       <div className={styles.div105}>
         <div className={styles.div104}>
           <div className={styles.div103}>
@@ -41,13 +55,13 @@ export function Nav() {
                   <nav className={styles.navLinkButton} data-name={"Nav Link Button"}>
                     <Link
                       href={"/careers"}
-                      className={styles.tertiaryBlackTetx}
+                      className={
+                        overFooter ? styles.tertiaryWhiteText : styles.tertiaryBlackTetx
+                      }
                       data-name={"Nav Link Button"}
                       data-highlight={"true"}
                       data-framer-page-link-current={"true"}
                       tabIndex={0}
-                      data-framecoded-trigger={"h3777ai"}
-                      data-framecoded-state={"h3777aisroot"}
                     >
                       <div className={styles.careers2}>
                         <div className={styles.applyToJoin}>
@@ -59,14 +73,12 @@ export function Nav() {
                     </Link>
                   </nav>
                   <div className={styles.bookCall2}>
-                    <a
-                      className={styles.black}
+                    <BookCallButton
+                      className={overFooter ? styles.white : styles.black}
                       data-highlight={"true"}
                       tabIndex={0}
-                      data-framecoded-trigger={"hliw6vb"}
-                      data-framecoded-state={"hliw6vbsroot"}
                     >
-                      <div className={styles.buttonLabel6}>
+                      <div className={styles.buttonLabel}>
                         <p className={styles.bookCall3} dir={"auto"}>
                           Book a call
                         </p>
@@ -79,12 +91,12 @@ export function Nav() {
                             aria-hidden="true"
                             dangerouslySetInnerHTML={{
                               __html:
-                                '<svg preserveAspectRatio="none" width="100%" height="100%" style="fill: rgb(0, 0, 0); stroke-width: 1px; stop-color: rgb(0, 0, 0); flood-color: rgb(0, 0, 0); font-family: sans-serif; font-size: 12px; font-weight: 400;"><use href="#svg624597309_307" style="fill: rgb(0, 0, 0); stroke-width: 1px; stop-color: rgb(0, 0, 0); flood-color: rgb(0, 0, 0); transform-origin: 0px 0px; font-family: sans-serif; font-size: 12px; font-weight: 400;"></use></svg>',
+                                '<svg preserveAspectRatio="none" width="100%" height="100%" style="fill: currentColor; stroke-width: 1px;"><use href="#svg-707097840_304"></use></svg>',
                             }}
                           />
                         </div>
                       </div>
-                    </a>
+                    </BookCallButton>
                   </div>
                   <nav
                     className={styles.navOpenBlack2}

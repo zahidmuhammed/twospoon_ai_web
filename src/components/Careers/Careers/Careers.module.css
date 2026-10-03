@@ -537,6 +537,15 @@
   flex-basis: auto;
 }
 
+.bookCall4 .white:hover {
+  opacity: 0.92;
+}
+
+.bookCall4 .white .bookCall5 {
+  color: rgb(23, 23, 23);
+  -webkit-text-fill-color: rgb(23, 23, 23);
+}
+
 .white {
   padding: 12px 20px;
   border-radius: 99px;
@@ -878,50 +887,13 @@
 }
 
 .careersLink {
-  padding: var(
-    --framer-link-current-text-background-padding,
-    var(--framer-link-text-background-padding, initial)
-  );
-  border-radius: var(
-    --framer-link-current-text-background-radius,
-    var(--framer-link-text-background-radius, initial)
-  );
-  caret-color: rgb(72, 160, 255);
-  color: rgb(72, 160, 255);
-  font-size: calc(
-    var(
-        --framer-link-current-font-size,
-        var(--framer-link-font-size, var(--framer-font-size, 16px))
-      ) *
-      var(--framer-font-size-scale, 1)
-  );
-  --framer-font-size: 12px;
-  text-decoration-line: underline;
-  text-decoration-color: rgb(72, 160, 255);
-  text-underline-offset: var(
-    --framer-link-current-text-decoration-offset,
-    var(--framer-link-text-decoration-offset, var(--framer-text-decoration-offset, initial))
-  );
-  -webkit-text-fill-color: rgb(72, 160, 255);
-  -webkit-text-stroke-color: rgb(72, 160, 255);
-  border-top-color: rgb(72, 160, 255);
-  border-right-color: rgb(72, 160, 255);
-  border-bottom-color: rgb(72, 160, 255);
-  border-left-color: rgb(72, 160, 255);
-  outline-color: rgb(72, 160, 255);
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  -webkit-text-fill-color: inherit;
   cursor: pointer;
-  transition-property:
-    color, text-decoration-color, text-decoration-thickness, text-underline-offset;
-  transition-duration: 0.4s, 0.4s, 0.4s, 0.4s;
-  transition-delay: 0s, 0s, 0s, 0s;
-  transition-timing-function:
-    cubic-bezier(0.44, 0, 0.56, 1), cubic-bezier(0.44, 0, 0.56, 1), cubic-bezier(0.44, 0, 0.56, 1),
-    cubic-bezier(0.44, 0, 0.56, 1);
-  transition-behavior: normal, normal, normal, normal;
-  text-decoration-thickness: var(
-    --framer-link-current-text-decoration-thickness,
-    var(--framer-link-text-decoration-thickness, var(--framer-text-decoration-thickness, initial))
-  );
 }
 
 .p2025OrdinaAllRightsReserved3 {
@@ -1299,7 +1271,7 @@
 
 @media (max-width: 809px) {
   .div106 {
-    flex-direction: column;
+    flex-direction: row;
   }
   .turnAIInto {
     width: 100%;

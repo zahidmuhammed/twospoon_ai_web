@@ -1,760 +1,251 @@
-.nav {
-  padding: 0px;
-  display: flex;
-  position: relative;
-  width: 1px;
-  height: min-content;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  flex-direction: column;
+.root {
+  width: 100%;
   flex-grow: 1;
   flex-shrink: 0;
-  flex-basis: 0px;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
-  gap: 10px;
-  row-gap: 10px;
-  column-gap: 10px;
-  place-content: flex-start;
+  flex-basis: 0;
 }
 
-.div10 {
-  display: contents;
-}
-
-.div9 {
-  position: relative;
-  width: 100%;
-  height: auto;
-  z-index: 0;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-}
-
-.div8 {
-  display: contents;
-}
-
-.desktop {
-  padding: 0px;
+.bar {
   display: flex;
-  position: relative;
-  width: 100%;
-  height: min-content;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  justify-content: center;
   align-items: center;
-  align-content: center;
-  gap: 0px;
-  row-gap: 0px;
-  column-gap: 0px;
-  place-content: center;
-  background-color: rgba(255, 255, 255, 0);
+  justify-content: center;
+  width: 100%;
+  background-color: var(--nav-bg, transparent);
+  transition: background-color 0.2s ease;
 }
 
-.bookCall {
-  padding: 24px 48px;
+.inner {
   display: flex;
-  position: relative;
-  width: 1px;
-  height: min-content;
-  max-width: 1440px;
-  padding-top: 24px;
-  padding-right: 48px;
-  padding-bottom: 24px;
-  padding-left: 48px;
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 0px;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  place-content: center space-between;
+  width: 100%;
+  max-width: 1440px;
+  padding: 24px 48px;
+  gap: 16px;
 }
 
-.div2 {
-  padding: 0px;
-  display: flex;
-  position: relative;
-  width: min-content;
-  height: min-content;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  gap: 0px;
-  row-gap: 0px;
-  column-gap: 0px;
-  place-content: center;
-}
-
-.tSLogo {
+.logoLink {
   display: block;
-  position: relative;
+  flex-shrink: 0;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.logo {
+  display: block;
   width: 107px;
-  height: var(--framer-aspect-ratio-supported, 36px);
-  --framer-aspect-ratio-supported: auto;
-  aspect-ratio: 2.96875 / 1;
-  caret-color: rgb(0, 0, 238);
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-  color: rgb(0, 0, 238);
-  text-decoration-color: rgb(0, 0, 238);
-  -webkit-text-fill-color: rgb(0, 0, 238);
-  -webkit-text-stroke-color: rgb(0, 0, 238);
-  border-top-color: rgb(0, 0, 238);
-  border-right-color: rgb(0, 0, 238);
-  border-bottom-color: rgb(0, 0, 238);
-  border-left-color: rgb(0, 0, 238);
-  outline-color: rgb(0, 0, 238);
-  cursor: pointer;
-  text-decoration-thickness: initial;
-}
-
-.div {
-  inset: 0px;
-  border-radius: inherit;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  caret-color: rgb(0, 0, 238);
-  text-decoration-color: rgb(0, 0, 238);
-  -webkit-text-stroke-color: rgb(0, 0, 238);
-  border-top-color: rgb(0, 0, 238);
-  border-right-color: rgb(0, 0, 238);
-  border-bottom-color: rgb(0, 0, 238);
-  border-left-color: rgb(0, 0, 238);
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
-  border-bottom-left-radius: inherit;
-  border-bottom-right-radius: inherit;
-  outline-color: rgb(0, 0, 238);
-}
-
-.image {
-  border-radius: inherit;
-  display: block;
-  width: 100%;
-  height: 100%;
-  caret-color: rgb(0, 0, 238);
-  text-decoration-color: rgb(0, 0, 238);
-  -webkit-text-stroke-color: rgb(0, 0, 238);
-  border-top-color: rgb(0, 0, 238);
-  border-right-color: rgb(0, 0, 238);
-  border-bottom-color: rgb(0, 0, 238);
-  border-left-color: rgb(0, 0, 238);
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
-  border-bottom-left-radius: inherit;
-  border-bottom-right-radius: inherit;
-  outline-color: rgb(0, 0, 238);
-  object-fit: cover;
-  object-position: center center;
-}
-
-.navClose {
-  position: relative;
-  width: 45px;
-  height: 40px;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-  display: none;
-}
-
-.navOpenWhite {
-  padding: 0px;
-  border-radius: 8px;
-  display: flex;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  gap: 6px;
-  row-gap: 6px;
-  column-gap: 6px;
-  place-content: center;
-  background-color: rgb(255, 255, 255);
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  cursor: pointer;
-}
-
-.div22 {
-  border-radius: 100px;
-  position: relative;
-  width: 20px;
-  height: 2px;
-  z-index: 1;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-  background-color: rgb(8, 10, 13);
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-  transform: none;
-}
-
-.div3 {
-  border-radius: 100px;
-  position: relative;
-  width: 20px;
-  height: 2px;
-  z-index: 1;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-  background-color: rgb(8, 10, 13);
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-  transform: none;
-}
-
-.careers {
-  padding: 0px;
-  border-radius: 0px;
-  display: flex;
-  position: relative;
-  width: min-content;
-  height: min-content;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  overflow-x: clip;
-  overflow-y: clip;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  gap: 10px;
-  row-gap: 10px;
-  column-gap: 10px;
-  place-content: center;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
-
-.navLinkButton {
-  position: relative;
-  width: auto;
   height: auto;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
+  aspect-ratio: 2.96875 / 1;
 }
 
-.tertiaryWhiteText {
-  padding: 0px;
-  border-radius: 100px;
+.desktopActions {
   display: flex;
-  position: relative;
-  width: min-content;
-  height: min-content;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  caret-color: rgb(0, 0, 238);
-  justify-content: center;
   align-items: center;
-  align-content: center;
-  gap: 0px;
-  row-gap: 0px;
-  column-gap: 0px;
-  place-content: center;
-  color: rgb(0, 0, 238);
-  text-decoration-color: rgb(0, 0, 238);
-  -webkit-text-fill-color: rgb(0, 0, 238);
-  -webkit-text-stroke-color: rgb(0, 0, 238);
-  border-top-color: rgb(0, 0, 238);
-  border-right-color: rgb(0, 0, 238);
-  border-bottom-color: rgb(0, 0, 238);
-  border-left-color: rgb(0, 0, 238);
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-  outline-color: rgb(0, 0, 238);
-  cursor: pointer;
-  text-decoration-thickness: initial;
+  gap: 8px;
 }
 
-.careers2 {
+.careersLink {
   padding: 12px 20px;
   border-radius: 10px;
-  display: flex;
-  position: relative;
-  width: min-content;
-  height: min-content;
-  padding-top: 12px;
-  padding-right: 20px;
-  padding-bottom: 12px;
-  padding-left: 20px;
-  overflow-x: clip;
-  overflow-y: clip;
-  caret-color: rgb(0, 0, 238);
-  flex-direction: column;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-  justify-content: center;
+  color: var(--nav-link);
+  font-family: "Neue Montreal Regular", "Neue Montreal Regular Placeholder", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.careersLink:hover {
+  opacity: 0.85;
+}
+
+.cta {
+  display: inline-flex;
   align-items: center;
-  align-content: center;
   gap: 12px;
-  row-gap: 12px;
-  column-gap: 12px;
-  place-content: center;
-  text-decoration-color: rgb(0, 0, 238);
-  -webkit-text-stroke-color: rgb(0, 0, 238);
-  border-top-color: rgb(0, 0, 238);
-  border-right-color: rgb(0, 0, 238);
-  border-bottom-color: rgb(0, 0, 238);
-  border-left-color: rgb(0, 0, 238);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  outline-color: rgb(0, 0, 238);
-}
-
-.applyToJoin {
-  display: flex;
-  position: relative;
-  width: auto;
-  height: auto;
-  caret-color: rgb(0, 0, 238);
-  flex-direction: column;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-  justify-content: flex-start;
-  place-content: normal flex-start;
-  text-decoration-color: rgb(0, 0, 238);
-  white-space: pre;
-  -webkit-text-stroke-color: rgb(0, 0, 238);
-  border-top-color: rgb(0, 0, 238);
-  border-right-color: rgb(0, 0, 238);
-  border-bottom-color: rgb(0, 0, 238);
-  border-left-color: rgb(0, 0, 238);
-  outline-width: initial;
-  outline-color: rgb(0, 0, 238);
-  transform: none;
-}
-
-.careers3 {
-  margin: 0px;
-  padding: var(
-    --framer-blockquote-text-background-padding,
-    var(--framer-text-background-padding, initial)
-  );
-  border-radius: var(
-    --framer-blockquote-text-background-radius,
-    var(--framer-text-background-radius, initial)
-  );
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  caret-color: rgb(255, 255, 255);
-  color: rgb(255, 255, 255);
-  font-family: "Neue Montreal Medium", "Neue Montreal Medium Placeholder", sans-serif;
-  font-size: calc(
-    var(--framer-blockquote-font-size, var(--framer-font-size, 16px)) *
-      var(--framer-font-size-scale, 1)
-  );
-  font-weight: 500;
-  line-height: var(--framer-blockquote-line-height, var(--framer-line-height, 1.2em));
-  --framer-line-height: 20px;
-  letter-spacing: var(--framer-blockquote-letter-spacing, var(--framer-letter-spacing, 0));
-  text-decoration-color: rgb(255, 255, 255);
-  text-underline-offset: var(
-    --framer-blockquote-text-decoration-offset,
-    var(--framer-text-decoration-offset, initial)
-  );
-  -webkit-text-fill-color: rgb(255, 255, 255);
-  -webkit-text-stroke-color: rgb(255, 255, 255);
-  border-top-color: rgb(255, 255, 255);
-  border-right-color: rgb(255, 255, 255);
-  border-bottom-color: rgb(255, 255, 255);
-  border-left-color: rgb(255, 255, 255);
-  outline-color: rgb(255, 255, 255);
-  text-decoration-thickness: var(
-    --framer-blockquote-text-decoration-thickness,
-    var(--framer-text-decoration-thickness, initial)
-  );
-}
-
-.bookCall2 {
-  position: relative;
-  width: auto;
-  height: auto;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-}
-
-.white {
   padding: 12px 20px;
+  border: none;
   border-radius: 99px;
-  display: flex;
-  position: relative;
-  width: min-content;
-  height: min-content;
-  padding-top: 12px;
-  padding-right: 20px;
-  padding-bottom: 12px;
-  padding-left: 20px;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  gap: 12px;
-  row-gap: 12px;
-  column-gap: 12px;
-  place-content: center;
-  background-color: rgb(255, 255, 255);
-  border-top-left-radius: 99px;
-  border-top-right-radius: 99px;
-  border-bottom-left-radius: 99px;
-  border-bottom-right-radius: 99px;
-  cursor: pointer;
-}
-
-.buttonLabel {
-  display: flex;
-  position: relative;
-  width: auto;
-  height: auto;
-  flex-direction: column;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-  justify-content: flex-start;
-  place-content: normal flex-start;
-  white-space: pre;
-  outline-width: initial;
-  transform: none;
-}
-
-.bookCall3 {
-  margin: 0px;
-  padding: var(
-    --framer-blockquote-text-background-padding,
-    var(--framer-text-background-padding, initial)
-  );
-  border-radius: var(
-    --framer-blockquote-text-background-radius,
-    var(--framer-text-background-radius, initial)
-  );
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  caret-color: rgb(23, 23, 23);
-  color: rgb(23, 23, 23);
+  background-color: var(--nav-cta-bg);
+  color: var(--nav-cta-text);
   font-family: "Neue Montreal Medium", "Neue Montreal Medium Placeholder", sans-serif;
-  font-size: calc(
-    var(--framer-blockquote-font-size, var(--framer-font-size, 16px)) *
-      var(--framer-font-size-scale, 1)
-  );
+  font-size: 16px;
   font-weight: 500;
-  line-height: var(--framer-blockquote-line-height, var(--framer-line-height, 1.2em));
-  --framer-line-height: 20px;
-  letter-spacing: var(--framer-blockquote-letter-spacing, var(--framer-letter-spacing, 0));
-  text-decoration-color: rgb(23, 23, 23);
-  text-underline-offset: var(
-    --framer-blockquote-text-decoration-offset,
-    var(--framer-text-decoration-offset, initial)
-  );
-  -webkit-text-fill-color: rgb(23, 23, 23);
-  -webkit-text-stroke-color: rgb(23, 23, 23);
-  border-top-color: rgb(23, 23, 23);
-  border-right-color: rgb(23, 23, 23);
-  border-bottom-color: rgb(23, 23, 23);
-  border-left-color: rgb(23, 23, 23);
-  outline-color: rgb(23, 23, 23);
-  text-decoration-thickness: var(
-    --framer-blockquote-text-decoration-thickness,
-    var(--framer-text-decoration-thickness, initial)
-  );
+  line-height: 20px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
 }
 
-.div5 {
-  position: relative;
+.cta:hover {
+  opacity: 0.92;
+}
+
+.ctaIcon {
+  display: block;
   width: 9px;
   height: 9px;
   flex-shrink: 0;
-  image-rendering: pixelated;
+  color: var(--nav-cta-text);
 }
 
-.div4 {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: inherit;
-  image-rendering: pixelated;
-}
-
-.icon {
-  display: block;
-  width: 100%;
-  height: 100%;
-  image-rendering: pixelated;
-}
-
-.navOpenWhite2 {
-  padding: 0px;
-  border-radius: 8px;
+.menuButton {
   display: none;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  align-content: center;
-  gap: 6px;
-  row-gap: 6px;
-  column-gap: 6px;
-  place-content: center;
-  background-color: rgb(255, 255, 255);
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--nav-menu-bg);
   cursor: pointer;
 }
 
-.div23 {
-  border-radius: 100px;
+.menuIcon {
   position: relative;
   width: 20px;
-  height: 2px;
-  z-index: 1;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-  background-color: rgb(8, 10, 13);
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-  transform: none;
+  height: 14px;
 }
 
-.div32 {
-  border-radius: 100px;
-  position: relative;
+.menuLine {
+  position: absolute;
+  left: 0;
   width: 20px;
   height: 2px;
-  z-index: 1;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-  background-color: rgb(8, 10, 13);
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-  transform: none;
+  border-radius: 100px;
+  background-color: var(--nav-menu-line);
+  transition: transform 0.2s ease, opacity 0.2s ease, top 0.2s ease;
 }
 
-@media (max-width: 1119px) {
-  .bookCall {
-    flex-direction: column;
-    justify-content: center;
-    gap: 40px;
-    row-gap: 40px;
-    column-gap: 40px;
-    place-content: center;
-  }
-  .div2 {
-    width: 100%;
-    justify-content: space-between;
-    gap: unset;
-    row-gap: unset;
-    column-gap: unset;
-    place-content: center space-between;
-  }
-  .navClose {
-    display: block;
-  }
-  .careers {
-    display: none;
+.menuLine:nth-child(1) {
+  top: 0;
+}
+
+.menuLine:nth-child(2) {
+  top: 6px;
+}
+
+.menuLine:nth-child(3) {
+  top: 12px;
+}
+
+.menuButtonOpen .menuLine:nth-child(1) {
+  top: 6px;
+  transform: rotate(45deg);
+}
+
+.menuButtonOpen .menuLine:nth-child(2) {
+  opacity: 0;
+}
+
+.menuButtonOpen .menuLine:nth-child(3) {
+  top: 6px;
+  transform: rotate(-45deg);
+}
+
+.mobileBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background-color: rgba(8, 10, 13, 0.45);
+}
+
+.mobilePanel {
+  position: fixed;
+  z-index: 9999;
+  top: 88px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 16px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.15);
+}
+
+.mobileCareers {
+  padding: 8px 0;
+  color: rgb(8, 10, 13);
+  font-family: "Neue Montreal Regular", "Neue Montreal Regular Placeholder", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.mobileCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 99px;
+  background-color: rgb(23, 23, 23);
+  color: rgb(255, 255, 255);
+  font-family: "Neue Montreal Medium", "Neue Montreal Medium Placeholder", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.mobileCtaIcon {
+  display: block;
+  width: 9px;
+  height: 9px;
+  color: rgb(255, 255, 255);
+}
+
+.themeHero,
+.themeFooter {
+  --nav-bg: transparent;
+  --nav-link: rgb(255, 255, 255);
+  --nav-cta-bg: rgb(255, 255, 255);
+  --nav-cta-text: rgb(23, 23, 23);
+  --nav-menu-bg: rgb(255, 255, 255);
+  --nav-menu-line: rgb(8, 10, 13);
+}
+
+.themeSolid {
+  --nav-bg: rgb(255, 255, 255);
+  --nav-link: rgb(8, 10, 13);
+  --nav-cta-bg: rgb(23, 23, 23);
+  --nav-cta-text: rgb(255, 255, 255);
+  --nav-menu-bg: rgb(255, 255, 255);
+  --nav-menu-line: rgb(8, 10, 13);
+}
+
+@media (min-width: 810px) {
+  .logo {
+    width: 107px;
   }
 }
 
 @media (max-width: 809px) {
-  .nav {
-    width: 100%;
-    flex-grow: 0;
-    flex-basis: auto;
-  }
-  .div8 {
-    padding: 0px;
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: min-content;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    gap: 0px;
-    row-gap: 0px;
-    column-gap: 0px;
-    place-content: center;
-    background-color: rgba(255, 255, 255, 0);
-  }
-  .desktop {
+  .inner {
     padding: 12px 24px;
-    width: 1px;
-    max-width: 1440px;
-    padding-top: 12px;
-    padding-right: 24px;
-    padding-bottom: 12px;
-    padding-left: 24px;
-    flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 0px;
-    gap: 40px;
-    row-gap: 40px;
-    column-gap: 40px;
-    background-color: transparent;
   }
-  .bookCall {
-    padding: 0px;
-    width: 100%;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    flex-grow: 0;
-    flex-basis: auto;
-    justify-content: space-between;
-    gap: unset;
-    row-gap: unset;
-    column-gap: unset;
-    place-content: center space-between;
-    max-width: none;
-  }
-  .div2 {
-    display: block;
-    width: 89px;
-    height: var(--framer-aspect-ratio-supported, 30px);
-    --framer-aspect-ratio-supported: auto;
-    aspect-ratio: 2.96875 / 1;
-    caret-color: rgb(0, 0, 238);
-    color: rgb(0, 0, 238);
-    text-decoration-color: rgb(0, 0, 238);
-    -webkit-text-fill-color: rgb(0, 0, 238);
-    -webkit-text-stroke-color: rgb(0, 0, 238);
-    border-top-color: rgb(0, 0, 238);
-    border-right-color: rgb(0, 0, 238);
-    border-bottom-color: rgb(0, 0, 238);
-    border-left-color: rgb(0, 0, 238);
-    outline-color: rgb(0, 0, 238);
-    cursor: pointer;
-    text-decoration-thickness: initial;
-    padding: 0px;
-    gap: 0px;
-  }
-  .tSLogo {
-    inset: 0px;
-    border-radius: inherit;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit;
-    display: block;
-    width: auto;
-    height: auto;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    color: inherit;
-  }
-  .div {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    position: static;
-  }
-  .navClose {
+
+  .desktopActions {
     display: none;
   }
-  .careers {
-    width: 45px;
-    height: 40px;
-    padding: 0px;
-    border-radius: 0;
-    display: block;
-    gap: 0px;
-  }
-  .navLinkButton {
-    display: none;
-  }
-  .bookCall2 {
-    display: none;
-  }
-  .navOpenWhite2 {
+
+  .menuButton {
     display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar,
+  .careersLink,
+  .cta,
+  .menuLine {
+    transition: none;
   }
 }

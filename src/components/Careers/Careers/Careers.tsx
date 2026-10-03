@@ -9,6 +9,8 @@ import { Section2 } from "../Section2";
 import { Section3 } from "../Section3";
 import { Section4 } from "../Section4";
 import { Section5 } from "../Section5";
+import { BookCallButton } from "@/components/BookCall";
+import { UnicornScene } from "@/components/Unicorn";
 
 export function Careers() {
   return (
@@ -28,7 +30,7 @@ export function Careers() {
         <div className={styles.div106}>
           <Nav />
         </div>
-        <div className={styles.div118}>
+        <div className={styles.div118} id={"careers-footer-hero"}>
           <div className={styles.p2026TwospoonAll}>
             <div className={styles.p2026TwospoonAll2}>
               <div className={styles.turnAIInto}>
@@ -56,19 +58,13 @@ export function Careers() {
                     </div>
                   </div>
                   <div className={styles.bookCall4}>
-                    <a
+                    <BookCallButton
                       className={styles.white}
                       data-highlight={"true"}
                       tabIndex={0}
-                      data-framecoded-trigger={"h1cawftl"}
-                      data-framecoded-state={"h1cawftlsroot"}
                     >
                       <div className={styles.buttonLabel7}>
-                        <p
-                          className={styles.bookCall5}
-                          dir={"auto"}
-                          data-framecoded-state={"h1cawftls0_0"}
-                        >
+                        <p className={styles.bookCall5} dir={"auto"}>
                           Book a call
                         </p>
                       </div>
@@ -85,7 +81,7 @@ export function Careers() {
                           />
                         </div>
                       </div>
-                    </a>
+                    </BookCallButton>
                   </div>
                 </div>
               </div>
@@ -149,23 +145,7 @@ export function Careers() {
               <div className={styles.overlay2}></div>
               <div className={styles.madeWithUnicorn}>
                 <div className={styles.madeWithUnicorn2}>
-                  <div
-                    className={styles.madeWithUnicorn3}
-                    data-us-dpi={"1.5"}
-                    data-us-scale={"1"}
-                    data-us-fps={"60"}
-                    data-us-alttext={""}
-                    data-us-arialabel={""}
-                    data-us-controls={"true"}
-                    data-us-lazyload={"true"}
-                    data-us-project={"HnieduOQjgL6OWki9KXu?update=0.5882206608425162"}
-                    data-scene-id={"id-7craju614re0abhwtadqic"}
-                  >
-                    <canvas
-                      className={styles.canvas}
-                      aria-label={"Unicorn Studio Scene"}
-                      role={"img"}
-                    ></canvas>
+                  <UnicornScene embed={"embed_002"} className={styles.madeWithUnicorn3} lazyLoad>
                     <a
                       href={"https://unicorn.studio?utm_source=public-url"}
                       target={"_blank"}
@@ -178,7 +158,7 @@ export function Careers() {
                         alt={"Made with unicorn.studio"}
                       />
                     </a>
-                  </div>
+                  </UnicornScene>
                 </div>
               </div>
             </div>

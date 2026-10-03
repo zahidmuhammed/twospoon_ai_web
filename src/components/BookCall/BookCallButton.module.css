@@ -1,0 +1,8 @@
+.reset {
+  margin: 0;
+  border: none;
+  font: inherit;
+  text-align: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+}

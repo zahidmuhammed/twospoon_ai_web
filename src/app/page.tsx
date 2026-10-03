@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Home } from "@/components/Home";
-import { siteAssetUrl, siteJsonLd, siteUrl } from "@/config/site";
+import { siteAssetUrl, siteUrl } from "@/config/site";
 import { MotionRuntime } from "@/ui/MotionRuntime";
 import { motionDefinitions, interactionDefinitions } from "@/components/Home/Home/Home.motion";
-
-const structuredData: unknown[] = [];
 
 export const metadata: Metadata = {
   title: "Twospoon - AI-native engineering team that ships in weeks, not quarters",
@@ -30,13 +28,6 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      {structuredData.map((value, index) => (
-        <script
-          key={index}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: siteJsonLd(value) }}
-        />
-      ))}
       <Home />
       <MotionRuntime definitions={motionDefinitions} interactions={interactionDefinitions} />
     </>

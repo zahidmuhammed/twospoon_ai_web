@@ -3,7 +3,7 @@ import { Image } from "../../../ui/Image";
 import Link from "next/link";
 export function Section2() {
   return (
-    <section className={styles.section2}>
+    <section className={styles.section2} id={"careers-first-section"}>
       <div className={styles.joinTeamThat}>
         <div className={styles.hero}>
           <header className={styles.joinTeamThatHeader}>

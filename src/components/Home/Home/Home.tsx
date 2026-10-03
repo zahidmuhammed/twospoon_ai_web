@@ -5,6 +5,8 @@ import { BackArrowSection } from "../BackArrowSection";
 import { Nav } from "../Nav";
 import { NavigationBar } from "../NavigationBar";
 import { TextSection } from "../TextSection";
+import { BookCallButton } from "@/components/BookCall";
+import { UnicornScene } from "@/components/Unicorn";
 
 export function Home() {
   return (
@@ -18,7 +20,7 @@ export function Home() {
           <Nav />
         </div>
         <div className={styles.div166}>
-          <div className={styles.hero}>
+          <div className={styles.hero} id={"home-hero"}>
             <div className={styles.content}>
               <div className={styles.aINativeEngineering}>
                 <div className={styles.textsWrapper}>
@@ -51,7 +53,7 @@ export function Home() {
                 </div>
                 <div className={styles.bookCall4}>
                   <div className={styles.bookCall5} id={"17qshk9"}>
-                    <a
+                    <BookCallButton
                       className={styles.white2}
                       data-highlight={"true"}
                       tabIndex={0}
@@ -80,7 +82,7 @@ export function Home() {
                           />
                         </div>
                       </div>
-                    </a>
+                    </BookCallButton>
                   </div>
                 </div>
               </div>
@@ -240,23 +242,7 @@ export function Home() {
             </div>
             <div className={styles.madeWithUnicorn}>
               <div className={styles.madeWithUnicorn2}>
-                <div
-                  className={styles.madeWithUnicorn3}
-                  data-us-dpi={"1.5"}
-                  data-us-scale={"1"}
-                  data-us-fps={"60"}
-                  data-us-alttext={""}
-                  data-us-arialabel={""}
-                  data-us-controls={"true"}
-                  data-us-lazyload={"true"}
-                  data-us-project={"0ckf4AXOaSbNZz6Uc2tn?update=0.3905182391414811"}
-                  data-scene-id={"id-de3gyk3c8oivovs6bnwfue"}
-                >
-                  <canvas
-                    className={styles.canvas}
-                    aria-label={"Unicorn Studio Scene"}
-                    role={"img"}
-                  ></canvas>
+                <UnicornScene embed={"embed_001"} className={styles.madeWithUnicorn3} lazyLoad>
                   <a
                     href={"https://unicorn.studio?utm_source=public-url"}
                     target={"_blank"}
@@ -269,7 +255,7 @@ export function Home() {
                       alt={"Made with unicorn.studio"}
                     />
                   </a>
-                </div>
+                </UnicornScene>
               </div>
             </div>
             <div className={styles.overlay}></div>
@@ -299,7 +285,7 @@ export function Home() {
                   </div>
                   <div className={styles.bookCall7}>
                     <div className={styles.bookCall8} id={"1jwkrqj"}>
-                      <a
+                      <BookCallButton
                         className={styles.black}
                         data-highlight={"true"}
                         tabIndex={0}
@@ -324,7 +310,7 @@ export function Home() {
                             />
                           </div>
                         </div>
-                      </a>
+                      </BookCallButton>
                     </div>
                   </div>
                 </div>
@@ -1768,7 +1754,7 @@ export function Home() {
                 </div>
                 <div className={styles.bookCall10}>
                   <div className={styles.bookCall11} id={"10itwtd"}>
-                    <a
+                    <BookCallButton
                       className={styles.black2}
                       data-highlight={"true"}
                       tabIndex={0}
@@ -1793,7 +1779,7 @@ export function Home() {
                           />
                         </div>
                       </div>
-                    </a>
+                    </BookCallButton>
                   </div>
                 </div>
               </div>
@@ -1999,7 +1985,7 @@ export function Home() {
         </div>
         <div className={styles.div167} id={"overlay"}></div>
         <div className={styles.div1682}></div>
-        <div className={styles.div1802}>
+        <div className={styles.div1802} id={"home-footer-hero"}>
           <div className={styles.p2026TwospoonAll}>
             <div className={styles.p2026TwospoonAll2}>
               <div className={styles.turnAIInto}>
@@ -2027,7 +2013,7 @@ export function Home() {
                     </div>
                   </div>
                   <div className={styles.bookCall13}>
-                    <a
+                    <BookCallButton
                       className={styles.white3}
                       data-highlight={"true"}
                       tabIndex={0}
@@ -2056,7 +2042,7 @@ export function Home() {
                           />
                         </div>
                       </div>
-                    </a>
+                    </BookCallButton>
                   </div>
                 </div>
               </div>
@@ -2116,23 +2102,7 @@ export function Home() {
               <div className={styles.overlay22}></div>
               <div className={styles.madeWithUnicorn5}>
                 <div className={styles.madeWithUnicorn6}>
-                  <div
-                    className={styles.madeWithUnicorn7}
-                    data-us-dpi={"1.5"}
-                    data-us-scale={"1"}
-                    data-us-fps={"60"}
-                    data-us-alttext={""}
-                    data-us-arialabel={""}
-                    data-us-controls={"true"}
-                    data-us-lazyload={"true"}
-                    data-us-project={"HnieduOQjgL6OWki9KXu?update=0.6103294657654699"}
-                    data-scene-id={"id-4koue8hgsg7a1txwbguju7"}
-                  >
-                    <canvas
-                      className={styles.canvas2}
-                      aria-label={"Unicorn Studio Scene"}
-                      role={"img"}
-                    ></canvas>
+                  <UnicornScene embed={"embed_002"} className={styles.madeWithUnicorn7} lazyLoad>
                     <a
                       href={"https://unicorn.studio?utm_source=public-url"}
                       target={"_blank"}
@@ -2145,7 +2115,7 @@ export function Home() {
                         alt={"Made with unicorn.studio"}
                       />
                     </a>
-                  </div>
+                  </UnicornScene>
                 </div>
               </div>
             </div>

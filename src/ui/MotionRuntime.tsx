@@ -259,6 +259,14 @@ export function MotionRuntime({
     };
   }, [definitions, interactions]);
 
+  useLayoutEffect(() => {
+    try {
+      new Function(motionBootstrapScript(definitions))();
+    } catch (error) {
+      console.error("[MotionRuntime] motion bootstrap failed", error);
+    }
+  }, [definitions, responsiveRevision]);
+
   useEffect(() => {
     const running: Animation[] = [];
     const observers: IntersectionObserver[] = [];
@@ -935,10 +943,5 @@ export function MotionRuntime({
     };
   }, [definitions, interactions, responsiveRevision]);
 
-  return (
-    <script
-      data-framecoded-motion-bootstrap="true"
-      dangerouslySetInnerHTML={{ __html: motionBootstrapScript(definitions) }}
-    />
-  );
+  return null;
 }

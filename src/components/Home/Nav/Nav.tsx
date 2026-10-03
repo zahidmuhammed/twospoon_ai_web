@@ -1,119 +1,119 @@
-import styles from "./Nav.module.css";
-import { Image } from "../../../ui/Image";
+"use client";
+
+import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
+import { Image } from "../../../ui/Image";
+import { BookCallButton } from "@/components/BookCall";
+import { NAV_LOGO_DARK, NAV_LOGO_WHITE } from "@/config/navAssets";
+import styles from "./Nav.module.css";
+import { useHomeNavTheme, type HomeNavTheme } from "./useHomeNavTheme";
+
+const CTA_ARROW = (
+  <span className={styles.ctaIcon} aria-hidden="true">
+    <svg preserveAspectRatio="none" width="100%" height="100%" style={{ fill: "currentColor" }}>
+      <use href="#svg-707097840_304" />
+    </svg>
+  </span>
+);
+
+function themeClass(theme: HomeNavTheme): string {
+  if (theme === "solid") return styles.themeSolid;
+  if (theme === "footer") return styles.themeFooter;
+  return styles.themeHero;
+}
+
+function useLightLogo(theme: HomeNavTheme): boolean {
+  return theme === "hero" || theme === "footer";
+}
+
 export function Nav() {
+  const theme = useHomeNavTheme();
+  const lightLogo = useLightLogo(theme);
+  const logo = lightLogo ? NAV_LOGO_WHITE : NAV_LOGO_DARK;
+
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const closeMobile = useCallback(() => setMobileOpen(false), []);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closeMobile();
+    };
+    document.addEventListener("keydown", onKeyDown);
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [mobileOpen, closeMobile]);
+
+  useEffect(() => {
+    closeMobile();
+  }, [theme, closeMobile]);
+
   return (
-    <nav className={styles.nav}>
-      <div className={styles.div10}>
-        <div className={styles.div9}>
-          <div className={styles.div8} data-framecoded-motion={"rj"}>
-            <div className={styles.desktop} data-framecoded-motion={"ri"}>
-              <div className={styles.bookCall}>
-                <div className={styles.div2}>
-                  <Link href={"/"} className={styles.tSLogo} data-framer-page-link-current={"true"}>
-                    <div className={styles.div}>
-                      <Image
-                        className={styles.image}
-                        src={"/assets/1IBJt3Kk0BWgZiQy99caMRoTc-8d281a0a7b.png"}
-                        alt={"twospoon.ai image"}
-                        width={285}
-                        height={96}
-                        srcSet={
-                          "/assets/1IBJt3Kk0BWgZiQy99caMRoTc-0f2ff72f1b.png 143w, /assets/1IBJt3Kk0BWgZiQy99caMRoTc-98b8828716.png 285w, /assets/1IBJt3Kk0BWgZiQy99caMRoTc-ea912e9b9e.png 570w"
-                        }
-                        sizes={"(max-width: 285px) 100vw, 285px"}
-                        priority
-                      />
-                    </div>
-                  </Link>
-                  <div className={styles.navClose} data-name={"NavClose"}>
-                    <div
-                      className={styles.navOpenWhite}
-                      data-name={"NavClose"}
-                      data-highlight={"true"}
-                      tabIndex={0}
-                      data-framecoded-motion={"ru3"}
-                    >
-                      <div className={styles.div22} data-framecoded-motion={"ru1"}></div>
-                      <div className={styles.div3} data-framecoded-motion={"ru2"}></div>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.careers}>
-                  <nav className={styles.navLinkButton} data-name={"Nav Link Button"}>
-                    <Link
-                      href={"/careers"}
-                      className={styles.tertiaryWhiteText}
-                      data-name={"Nav Link Button"}
-                      data-highlight={"true"}
-                      tabIndex={0}
-                      data-framecoded-trigger={"h3777ai"}
-                      data-framecoded-state={"h3777aisroot"}
-                    >
-                      <div className={styles.careers2}>
-                        <div className={styles.applyToJoin} data-framecoded-motion={"r5"}>
-                          <p
-                            className={styles.careers3}
-                            dir={"auto"}
-                            data-framecoded-state={"t0s19"}
-                            data-framecoded-motion={"r4"}
-                          >
-                            Careers
-                          </p>
-                        </div>
-                      </div>
-                    </Link>
-                  </nav>
-                  <div className={styles.bookCall2}>
-                    <a
-                      className={styles.white}
-                      data-highlight={"true"}
-                      tabIndex={0}
-                      data-framecoded-trigger={"h1cawftl"}
-                      data-framecoded-state={"h1cawftlsroot"}
-                      data-framecoded-motion={"re"}
-                    >
-                      <div className={styles.buttonLabel} data-framecoded-motion={"ra"}>
-                        <p
-                          className={styles.bookCall3}
-                          dir={"auto"}
-                          data-framecoded-state={"h1cawftls0_0"}
-                          data-framecoded-motion={"r9"}
-                        >
-                          Book a call
-                        </p>
-                      </div>
-                      <div className={styles.div5} aria-hidden={"true"}>
-                        <div className={styles.div4}>
-                          <span
-                            className={styles.icon}
-                            data-framecoded-svg="true"
-                            aria-hidden="true"
-                            dangerouslySetInnerHTML={{
-                              __html:
-                                '<svg preserveAspectRatio="none" width="100%" height="100%" style="fill: rgb(0, 0, 0); stroke-width: 1px; stop-color: rgb(0, 0, 0); flood-color: rgb(0, 0, 0); font-family: sans-serif; font-size: 12px; font-weight: 400;"><use href="#svg-707097840_304" style="fill: rgb(0, 0, 0); stroke-width: 1px; stop-color: rgb(0, 0, 0); flood-color: rgb(0, 0, 0); transform-origin: 0px 0px; font-family: sans-serif; font-size: 12px; font-weight: 400;"></use></svg>',
-                            }}
-                          />
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    className={styles.navOpenWhite2}
-                    data-name={"NavClose"}
-                    data-highlight={"true"}
-                    tabIndex={0}
-                    data-framecoded-motion={"r1kl"}
-                  >
-                    <div className={styles.div23} data-framecoded-motion={"r1kj"}></div>
-                    <div className={styles.div32} data-framecoded-motion={"r1kk"}></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <nav className={`${styles.root} ${themeClass(theme)}`} aria-label="Site">
+      <header className={styles.bar}>
+        <div className={styles.inner}>
+          <Link href="/" className={styles.logoLink} aria-current="page">
+            <Image
+              className={styles.logo}
+              src={logo.src}
+              alt="Twospoon"
+              width={logo.width}
+              height={logo.height}
+              srcSet={logo.srcSet}
+              sizes={logo.sizes}
+              priority
+            />
+          </Link>
+
+          <div className={styles.desktopActions}>
+            <Link href="/careers" className={styles.careersLink}>
+              Careers
+            </Link>
+            <BookCallButton className={styles.cta}>
+              Book a call
+              {CTA_ARROW}
+            </BookCallButton>
           </div>
+
+          <button
+            type="button"
+            className={`${styles.menuButton} ${mobileOpen ? styles.menuButtonOpen : ""}`}
+            aria-expanded={mobileOpen}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            onClick={() => setMobileOpen((open) => !open)}
+          >
+            <span className={styles.menuIcon} aria-hidden="true">
+              <span className={styles.menuLine} />
+              <span className={styles.menuLine} />
+              <span className={styles.menuLine} />
+            </span>
+          </button>
         </div>
-      </div>
+      </header>
+
+      {mobileOpen ? (
+        <>
+          <div className={styles.mobileBackdrop} role="presentation" onClick={closeMobile} />
+          <div className={styles.mobilePanel} role="dialog" aria-modal="true" aria-label="Menu">
+            <Link href="/careers" className={styles.mobileCareers} onClick={closeMobile}>
+              Careers
+            </Link>
+            <BookCallButton className={styles.mobileCta} onClick={closeMobile}>
+              Book a call
+              <span className={styles.mobileCtaIcon} aria-hidden="true">
+                <svg preserveAspectRatio="none" width="100%" height="100%" style={{ fill: "currentColor" }}>
+                  <use href="#svg-707097840_304" />
+                </svg>
+              </span>
+            </BookCallButton>
+          </div>
+        </>
+      ) : null}
     </nav>
   );
 }

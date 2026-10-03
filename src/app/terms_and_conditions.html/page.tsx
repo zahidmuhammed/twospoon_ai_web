@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { TermsAndConditionsHtml } from "@/components/TermsAndConditionsHtml";
-import { siteAssetUrl, siteJsonLd, siteUrl } from "@/config/site";
-
-const structuredData: unknown[] = [];
+import { siteUrl } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Page Not Found | Framer",
@@ -20,16 +18,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return (
-    <>
-      {structuredData.map((value, index) => (
-        <script
-          key={index}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: siteJsonLd(value) }}
-        />
-      ))}
-      <TermsAndConditionsHtml />
-    </>
-  );
+  return <TermsAndConditionsHtml />;
 }

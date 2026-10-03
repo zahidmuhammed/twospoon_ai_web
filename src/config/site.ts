@@ -26,24 +26,3 @@ export function siteAssetUrl(value: string): string {
     return siteUrl(value);
   }
 }
-
-function rewriteJsonLd(value: unknown): unknown {
-  if (typeof value === "string") {
-    if (/^https?:\/\//i.test(value)) return siteUrl(value);
-    return value;
-  }
-  if (Array.isArray(value)) return value.map(rewriteJsonLd);
-  if (value && typeof value === "object") {
-    return Object.fromEntries(
-      Object.entries(value as Record<string, unknown>).map(([key, entry]) => [
-        key,
-        rewriteJsonLd(entry),
-      ]),
-    );
-  }
-  return value;
-}
-
-export function siteJsonLd(value: unknown): string {
-  return JSON.stringify(rewriteJsonLd(value));
-}

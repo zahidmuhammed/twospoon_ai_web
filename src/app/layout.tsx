@@ -13,13 +13,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon-light.png" media="(prefers-color-scheme: light)" />
         <link rel="icon" href="/favicon-dark.png" media="(prefers-color-scheme: dark)" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <div
           aria-hidden="true"
           style={{
