@@ -4,7 +4,7 @@ import Link from "next/link";
 import { BackArrowSection } from "../BackArrowSection";
 import { Nav } from "../Nav";
 import { NavigationBar } from "../NavigationBar";
-import { TextSection } from "../TextSection";
+import { AboutUsSection } from "../AboutUsSection";
 import { BookCallButton } from "@/components/BookCall";
 import { UnicornScene } from "@/components/Unicorn";
 
@@ -260,20 +260,7 @@ export function Home() {
             </div>
             <div className={styles.overlay}></div>
           </div>
-          <div className={styles.aboutUs} id={"about-us"}>
-            <div className={styles.container2}>
-              <TextSection />
-              <section className={styles.section2} id={"1"}></section>
-              <section className={styles.section3} id={"2"}></section>
-              <section className={styles.section4} id={"3"}></section>
-              <section className={styles.section5} id={"4"}></section>
-              <section className={styles.section6} id={"5"}></section>
-              <section className={styles.section7} id={"6"}></section>
-              <section className={styles.section8} id={"7"}></section>
-              <section className={styles.section9} id={"8"}></section>
-              <section className={styles.section10} id={"9"}></section>
-            </div>
-          </div>
+          <AboutUsSection />
           <div className={styles.howWeWork} id={"how-we-work"}>
             <div className={styles.howWeWork2}>
               <div className={styles.howWeWork3}>

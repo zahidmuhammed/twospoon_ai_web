@@ -288,6 +288,13 @@ export function MotionRuntime({
       initialColor: string;
       initialOpacity: string;
     }> = [];
+    const viewportScrubMotions: Array<{
+      element: HTMLElement;
+      animation: Animation;
+      definition: MotionDefinition;
+      motionId: string;
+      startProgress: number;
+    }> = [];
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     const perpetualVisibilityTarget = (element: HTMLElement): HTMLElement => {
@@ -346,13 +353,13 @@ export function MotionRuntime({
             motion.options.iterations === "Infinity" || motion.options.iterations === Infinity;
           const contentTimeline = motion.options.__framecodedContent as
             | {
-                samples?: Array<{
-                  progress?: number;
-                  html?: string;
-                  color?: string;
-                  opacity?: string;
-                }>;
-              }
+              samples?: Array<{
+                progress?: number;
+                html?: string;
+                color?: string;
+                opacity?: string;
+              }>;
+            }
             | undefined;
           if (motion.trigger === "scroll" && contentTimeline?.samples?.length) {
             if (!reduced) {
@@ -377,15 +384,46 @@ export function MotionRuntime({
             if (!reduced) scrollMotions.push({ element, animation, definition: motion });
             continue;
           }
+          const animation = createAnimation(element, motion);
+          if (!animation) continue;
+          running.push(animation);
+
+          const viewport = motion.options.__framecodedView as
+            | {
+              rootMargin?: string;
+              threshold?: number;
+              startProgress?: number;
+              ancestorDepth?: number;
+            }
+            | undefined;
+          const hasCapturedObserver =
+            viewport?.rootMargin !== undefined ||
+            viewport?.threshold !== undefined ||
+            Number(viewport?.ancestorDepth ?? 0) > 0;
+          const scrubInView =
+            motion.trigger === "in-view" &&
+            !reduced &&
+            !hasCapturedObserver &&
+            Number.isFinite(viewport?.startProgress);
+
+          if (scrubInView) {
+            animation.pause();
+            animation.currentTime = 0;
+            viewportScrubMotions.push({
+              element,
+              animation,
+              definition: motion,
+              motionId: id,
+              startProgress: Number(viewport?.startProgress),
+            });
+            continue;
+          }
+
           if (reduced) {
             const frozen = createFrozenAnimation(element, motion, perpetual);
             if (frozen) running.push(frozen);
             continue;
           }
-
-          const animation = createAnimation(element, motion);
-          if (!animation) continue;
-          running.push(animation);
 
           if (perpetual) {
             animation.pause();
@@ -406,38 +444,6 @@ export function MotionRuntime({
           if (motion.trigger === "in-view") {
             animation.pause();
             animation.currentTime = 0;
-            const viewport = motion.options.__framecodedView as
-              | {
-                  rootMargin?: string;
-                  threshold?: number;
-                  startProgress?: number;
-                  ancestorDepth?: number;
-                }
-              | undefined;
-            const hasCapturedObserver =
-              viewport?.rootMargin !== undefined ||
-              viewport?.threshold !== undefined ||
-              Number(viewport?.ancestorDepth ?? 0) > 0;
-            if (!hasCapturedObserver && Number.isFinite(viewport?.startProgress)) {
-              const playAtCapturedScroll = () => {
-                const maximumScroll = Math.max(
-                  1,
-                  document.documentElement.scrollHeight - window.innerHeight,
-                );
-                if (window.scrollY + 1 < maximumScroll * Number(viewport?.startProgress)) return;
-                animation.play();
-                window.removeEventListener("scroll", playAtCapturedScroll);
-                window.removeEventListener("resize", playAtCapturedScroll);
-              };
-              window.addEventListener("scroll", playAtCapturedScroll, { passive: true });
-              window.addEventListener("resize", playAtCapturedScroll);
-              listenerCleanups.push(() => {
-                window.removeEventListener("scroll", playAtCapturedScroll);
-                window.removeEventListener("resize", playAtCapturedScroll);
-              });
-              playAtCapturedScroll();
-              continue;
-            }
             const observer = new IntersectionObserver(
               (entries) => {
                 if (!entries.some((entry) => entry.isIntersecting)) return;
@@ -461,7 +467,7 @@ export function MotionRuntime({
       }
     }
 
-    if (scrollMotions.length || scrollContents.length) {
+    if (scrollMotions.length || scrollContents.length || viewportScrubMotions.length) {
       let frame = 0;
       const elementLayoutTop = (element: HTMLElement) => {
         let top = 0;
@@ -477,15 +483,23 @@ export function MotionRuntime({
         for (const item of scrollMotions) {
           const range = item.definition.options.__framecodedScroll as
             | {
-                startOffset?: number;
-                endOffset?: number;
-                startProgress?: number;
-                endProgress?: number;
-              }
+              startOffset?: number;
+              endOffset?: number;
+              startProgress?: number;
+              endProgress?: number;
+            }
             | undefined;
           if (!range) continue;
-          const documentRelative =
+          let documentRelative =
             Number.isFinite(range.startProgress) && Number.isFinite(range.endProgress);
+          if (
+            documentRelative &&
+            item.element.closest("#about-us") &&
+            Number.isFinite(range.startOffset) &&
+            Number.isFinite(range.endOffset)
+          ) {
+            documentRelative = false;
+          }
           const maximumScroll = Math.max(
             1,
             document.documentElement.scrollHeight - window.innerHeight,
@@ -504,24 +518,40 @@ export function MotionRuntime({
           const duration = Number(item.definition.options.duration ?? 1000) || 1000;
           item.animation.currentTime = progress * duration;
         }
+        if (viewportScrubMotions.length) {
+          const maximumScroll = Math.max(
+            1,
+            document.documentElement.scrollHeight - window.innerHeight,
+          );
+          const documentProgress = window.scrollY / maximumScroll;
+          for (const item of viewportScrubMotions) {
+            const duration = Number(item.definition.options.duration ?? 1000) || 1000;
+            const start = item.startProgress;
+            const segmentProgress = Math.max(
+              0,
+              Math.min(1, (documentProgress - start) / 0.05),
+            );
+            item.animation.currentTime = segmentProgress * duration;
+          }
+        }
         const documentProgress = Math.max(
           0,
           Math.min(
             1,
             window.scrollY /
-              Math.max(1, document.documentElement.scrollHeight - window.innerHeight),
+            Math.max(1, document.documentElement.scrollHeight - window.innerHeight),
           ),
         );
         for (const item of scrollContents) {
           const content = item.definition.options.__framecodedContent as
             | {
-                samples?: Array<{
-                  progress?: number;
-                  html?: string;
-                  color?: string;
-                  opacity?: string;
-                }>;
-              }
+              samples?: Array<{
+                progress?: number;
+                html?: string;
+                color?: string;
+                opacity?: string;
+              }>;
+            }
             | undefined;
           const samples = content?.samples ?? [];
           let index = 0;
@@ -602,7 +632,7 @@ export function MotionRuntime({
                     duration: reduced
                       ? 0
                       : Number(open ? target.openDuration : target.closeDuration) ||
-                        interaction.duration,
+                      interaction.duration,
                     easing: "linear",
                     fill: "both",
                   });

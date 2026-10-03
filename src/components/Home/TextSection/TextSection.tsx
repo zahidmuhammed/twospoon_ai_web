@@ -1,6 +1,26 @@
-import styles from "./TextSection.module.css";
+"use client";
 
-export function TextSection() {
+import { AboutLineMask } from "./AboutLineMask";
+import styles from "./TextSection.module.css";
+import type { RefObject } from "react";
+
+const LINE_MASKS: Array<{ className: string; lineIndex: number }> = [
+  { className: styles.frame, lineIndex: 0 },
+  { className: styles.div29, lineIndex: 1 },
+  { className: styles.div30, lineIndex: 2 },
+  { className: styles.div31, lineIndex: 3 },
+  { className: styles.div322, lineIndex: 4 },
+  { className: styles.div302, lineIndex: 5 },
+  { className: styles.div312, lineIndex: 6 },
+  { className: styles.div323, lineIndex: 7 },
+  { className: styles.div324, lineIndex: 8 },
+];
+
+type TextSectionProps = {
+  aboutUsRef: RefObject<HTMLDivElement | null>;
+};
+
+export function TextSection({ aboutUsRef }: TextSectionProps) {
   return (
     <section className={styles.textSection}>
       <div className={styles.everyEnterpriseHas}>
@@ -15,15 +35,14 @@ export function TextSection() {
               </p>
             </div>
           </div>
-          <div className={styles.frame} data-framecoded-motion={"r2o"}></div>
-          <div className={styles.div29} data-framecoded-motion={"r2p"}></div>
-          <div className={styles.div30} data-framecoded-motion={"r2q"}></div>
-          <div className={styles.div31} data-framecoded-motion={"r2r"}></div>
-          <div className={styles.div322} data-framecoded-motion={"r2s"}></div>
-          <div className={styles.div302} data-framecoded-motion={"rwi"}></div>
-          <div className={styles.div312} data-framecoded-motion={"rwj"}></div>
-          <div className={styles.div323} data-framecoded-motion={"rwk"}></div>
-          <div className={styles.div324} data-framecoded-motion={"r1n2"}></div>
+          {LINE_MASKS.map(({ className, lineIndex }) => (
+            <AboutLineMask
+              key={className}
+              className={className}
+              aboutUsRef={aboutUsRef}
+              lineIndex={lineIndex}
+            />
+          ))}
           <div className={styles.div33}></div>
         </div>
       </div>
