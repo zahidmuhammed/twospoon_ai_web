@@ -20,3 +20,8 @@ export const CAREERS_LOGO_MARQUEE_VARS: CSSProperties = {
   "--marquee-gap": "0px",
   "--marquee-duration": "55s",
 } as CSSProperties;
+
+export const SECTION5_PHOTO_MARQUEE_VARS: CSSProperties = {
+  "--marquee-gap": "24px",
+  "--marquee-duration": "70s",
+} as CSSProperties;

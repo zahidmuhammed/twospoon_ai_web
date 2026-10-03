@@ -1,0 +1,17 @@
+.marqueeHost {
+  width: 100%;
+  max-width: 100%;
+}
+
+.marqueeHost .list3 {
+  transform: none !important;
+  width: auto;
+  height: auto;
+}
+
+.marqueeHost .item24,
+.marqueeHost .item25,
+.marqueeHost .item26,
+.marqueeHost .item27 {
+  transform: none !important;
+}
