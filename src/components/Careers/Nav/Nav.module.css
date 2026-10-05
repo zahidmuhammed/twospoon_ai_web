@@ -87,6 +87,7 @@
   align-items: center;
   gap: 12px;
   background-color: rgb(255, 255, 255);
+  color: rgb(23, 23, 23);
   cursor: pointer;
 }
 
@@ -355,7 +356,7 @@
 
 .careers2 {
   padding: 12px 20px;
-  border-radius: 10px;
+  border-radius: 99px;
   display: flex;
   position: relative;
   width: min-content;
@@ -377,10 +378,21 @@
   row-gap: 12px;
   column-gap: 12px;
   place-content: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  background-color: transparent;
+  transition: background-color 0.45s ease;
+  border-top-left-radius: 99px;
+  border-top-right-radius: 99px;
+  border-bottom-left-radius: 99px;
+  border-bottom-right-radius: 99px;
+}
+
+.tertiaryBlackTetx:hover .careers2 {
+  background-color: rgba(8, 10, 13, 0.06);
+}
+
+.navThemeOnFooter .tertiaryWhiteText:hover .careers2,
+.tertiaryWhiteText:hover .careers2 {
+  background-color: rgba(255, 255, 255, 0.12);
 }
 
 .applyToJoin {

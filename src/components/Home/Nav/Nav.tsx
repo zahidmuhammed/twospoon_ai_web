@@ -3,32 +3,10 @@
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { Image } from "../../../ui/Image";
-import { BookCallButton } from "@/components/BookCall";
+import { BookCallArrow, BookCallButton } from "@/components/BookCall";
 import { NAV_LOGO_DARK, NAV_LOGO_WHITE } from "@/config/navAssets";
 import styles from "./Nav.module.css";
 import { useHomeNavTheme, type HomeNavTheme } from "./useHomeNavTheme";
-
-function CtaArrow({ className }: { className: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 9 9"
-      width={9}
-      height={9}
-      overflow="visible"
-      aria-hidden
-    >
-      <path
-        d="M 0 0 L 9 0 L 9 9 M 0 9 L 9 0"
-        fill="transparent"
-        stroke="currentColor"
-        strokeWidth={1.35}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
 
 function themeClass(theme: HomeNavTheme): string {
   if (theme === "solid") return styles.themeSolid;
@@ -90,7 +68,7 @@ export function Nav() {
             </Link>
             <BookCallButton className={styles.cta}>
               Book a call
-              <CtaArrow className={styles.ctaIcon} />
+              <BookCallArrow className={styles.ctaIcon} />
             </BookCallButton>
           </div>
 
@@ -119,7 +97,7 @@ export function Nav() {
             </Link>
             <BookCallButton className={styles.mobileCta} onClick={closeMobile}>
               Book a call
-              <CtaArrow className={styles.mobileCtaIcon} />
+              <BookCallArrow className={styles.mobileCtaIcon} />
             </BookCallButton>
           </div>
         </>

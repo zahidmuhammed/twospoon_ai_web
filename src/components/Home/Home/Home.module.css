@@ -572,6 +572,13 @@
   border-bottom-left-radius: 99px;
   border-bottom-right-radius: 99px;
   cursor: pointer;
+  color: rgb(23, 23, 23);
+  transition: background-color 0.45s ease, color 0.45s ease;
+}
+
+.white2:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: rgb(255, 255, 255);
 }
 
 .buttonLabel2 {
@@ -608,8 +615,8 @@
   padding-right: 0px;
   padding-bottom: 0px;
   padding-left: 0px;
-  caret-color: rgb(23, 23, 23);
-  color: rgb(23, 23, 23);
+  caret-color: currentColor;
+  color: inherit;
   font-family:
     'Neue Montreal Medium', 'Neue Montreal Medium Placeholder', sans-serif;
   font-size: calc(
@@ -626,22 +633,26 @@
     --framer-blockquote-letter-spacing,
     var(--framer-letter-spacing, 0)
   );
-  text-decoration-color: rgb(23, 23, 23);
+  text-decoration-color: currentColor;
   text-underline-offset: var(
     --framer-blockquote-text-decoration-offset,
     var(--framer-text-decoration-offset, initial)
   );
-  -webkit-text-fill-color: rgb(23, 23, 23);
-  -webkit-text-stroke-color: rgb(23, 23, 23);
-  border-top-color: rgb(23, 23, 23);
-  border-right-color: rgb(23, 23, 23);
-  border-bottom-color: rgb(23, 23, 23);
-  border-left-color: rgb(23, 23, 23);
-  outline-color: rgb(23, 23, 23);
+  -webkit-text-fill-color: currentColor;
+  -webkit-text-stroke-color: currentColor;
+  border-top-color: currentColor;
+  border-right-color: currentColor;
+  border-bottom-color: currentColor;
+  border-left-color: currentColor;
+  outline-color: currentColor;
   text-decoration-thickness: var(
     --framer-blockquote-text-decoration-thickness,
     var(--framer-text-decoration-thickness, initial)
   );
+}
+
+.white2 .bookCall6 {
+  transition: none;
 }
 
 .div17 {
@@ -663,6 +674,7 @@
   display: block;
   width: 100%;
   height: 100%;
+  color: currentColor;
   image-rendering: pixelated;
 }
 
@@ -11827,39 +11839,17 @@
   border-bottom-right-radius: 99px;
   color: rgb(23, 23, 23);
   cursor: pointer;
-  transition:
-    color 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
-    background-color 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: background-color 0.45s ease, color 0.45s ease;
 }
 
 .white3:hover,
 .white3:focus-visible {
+  background-color: rgba(255, 255, 255, 0.4);
   color: rgb(255, 255, 255);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .white3:hover,
-  .white3:focus-visible {
-    background-color: rgba(255, 255, 255, 0.4);
-  }
-}
-
-.white3:hover .bookCall14,
-.white3:focus-visible .bookCall14 {
-  caret-color: rgb(255, 255, 255);
-  color: rgb(255, 255, 255);
-  text-decoration-color: rgb(255, 255, 255);
-  -webkit-text-fill-color: rgb(255, 255, 255);
-  -webkit-text-stroke-color: rgb(255, 255, 255);
-  border-top-color: rgb(255, 255, 255);
-  border-right-color: rgb(255, 255, 255);
-  border-bottom-color: rgb(255, 255, 255);
-  border-left-color: rgb(255, 255, 255);
-  outline-color: rgb(255, 255, 255);
 }
 
 .white3 .icon17 {
-  color: inherit;
+  color: currentColor;
 }
 
 .buttonLabel5 {
@@ -11896,8 +11886,8 @@
   padding-right: 0px;
   padding-bottom: 0px;
   padding-left: 0px;
-  caret-color: rgb(23, 23, 23);
-  color: rgb(23, 23, 23);
+  caret-color: currentColor;
+  color: inherit;
   font-family:
     'Neue Montreal Medium', 'Neue Montreal Medium Placeholder', sans-serif;
   font-size: calc(
@@ -11914,22 +11904,26 @@
     --framer-blockquote-letter-spacing,
     var(--framer-letter-spacing, 0)
   );
-  text-decoration-color: rgb(23, 23, 23);
+  text-decoration-color: currentColor;
   text-underline-offset: var(
     --framer-blockquote-text-decoration-offset,
     var(--framer-text-decoration-offset, initial)
   );
-  -webkit-text-fill-color: rgb(23, 23, 23);
-  -webkit-text-stroke-color: rgb(23, 23, 23);
-  border-top-color: rgb(23, 23, 23);
-  border-right-color: rgb(23, 23, 23);
-  border-bottom-color: rgb(23, 23, 23);
-  border-left-color: rgb(23, 23, 23);
-  outline-color: rgb(23, 23, 23);
+  -webkit-text-fill-color: currentColor;
+  -webkit-text-stroke-color: currentColor;
+  border-top-color: currentColor;
+  border-right-color: currentColor;
+  border-bottom-color: currentColor;
+  border-left-color: currentColor;
+  outline-color: currentColor;
   text-decoration-thickness: var(
     --framer-blockquote-text-decoration-thickness,
     var(--framer-text-decoration-thickness, initial)
   );
+}
+
+.white3 .bookCall14 {
+  transition: none;
 }
 
 .div171 {

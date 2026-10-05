@@ -7,6 +7,28 @@ import { BookCallButton } from "@/components/BookCall";
 import { useCareersNavOverFooter } from "./useCareersNavOverFooter";
 import { useCareersNavSolidBackground } from "./useCareersNavSolidBackground";
 
+function CtaArrow({ className }: { className: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 9 9"
+      width={9}
+      height={9}
+      overflow="visible"
+      aria-hidden
+    >
+      <path
+        d="M 0 0 L 9 0 L 9 9 M 0 9 L 9 0"
+        fill="transparent"
+        stroke="currentColor"
+        strokeWidth={1.35}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export function Nav() {
   const overFooter = useCareersNavOverFooter();
   const solidBackground = useCareersNavSolidBackground();
@@ -85,15 +107,7 @@ export function Nav() {
                       </div>
                       <div className={styles.div100} aria-hidden={"true"}>
                         <div className={styles.div99}>
-                          <span
-                            className={styles.icon7}
-                            data-framecoded-svg="true"
-                            aria-hidden="true"
-                            dangerouslySetInnerHTML={{
-                              __html:
-                                '<svg preserveAspectRatio="none" width="100%" height="100%" style="fill: currentColor; stroke-width: 1px;"><use href="#svg-707097840_304"></use></svg>',
-                            }}
-                          />
+                          <CtaArrow className={styles.icon7} />
                         </div>
                       </div>
                     </BookCallButton>

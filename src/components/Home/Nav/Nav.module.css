@@ -45,19 +45,33 @@
 }
 
 .careersLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 12px 20px;
-  border-radius: 10px;
+  border-radius: 99px;
+  background-color: transparent;
   color: var(--nav-link);
   font-family: "Neue Montreal Regular", "Neue Montreal Regular Placeholder", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-decoration: none;
-  transition: color 0.2s ease, opacity 0.2s ease;
+  -webkit-text-fill-color: currentColor;
+  transition:
+    background-color 0.45s ease,
+    color 0.45s ease;
 }
 
 .careersLink:hover {
-  opacity: 0.85;
+  background-color: var(--nav-careers-hover-bg);
+  color: var(--nav-careers-hover-color, var(--nav-link));
+  -webkit-text-fill-color: var(--nav-careers-hover-color, var(--nav-link));
+}
+
+.careersLink:focus-visible {
+  outline: 2px solid var(--nav-link);
+  outline-offset: 2px;
 }
 
 .cta {
@@ -74,11 +88,16 @@
   font-weight: 500;
   line-height: 20px;
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  transition:
+    background-color 0.45s ease,
+    color 0.45s ease,
+    opacity 0.2s ease;
 }
 
 .cta:hover {
-  opacity: 0.92;
+  background-color: var(--nav-cta-hover-bg, var(--nav-cta-bg));
+  color: var(--nav-cta-hover-text, var(--nav-cta-text));
+  opacity: var(--nav-cta-hover-opacity, 0.92);
 }
 
 .ctaIcon {
@@ -86,7 +105,7 @@
   width: 9px;
   height: 9px;
   flex-shrink: 0;
-  color: var(--nav-cta-text);
+  color: currentColor;
 }
 
 .menuButton {
@@ -199,15 +218,19 @@
   display: block;
   width: 9px;
   height: 9px;
-  color: rgb(255, 255, 255);
+  color: currentColor;
 }
 
 .themeHero,
 .themeFooter {
   --nav-bg: transparent;
   --nav-link: rgb(255, 255, 255);
+  --nav-careers-hover-bg: rgba(255, 255, 255, 0.12);
   --nav-cta-bg: rgb(255, 255, 255);
   --nav-cta-text: rgb(23, 23, 23);
+  --nav-cta-hover-bg: rgba(255, 255, 255, 0.4);
+  --nav-cta-hover-text: rgb(255, 255, 255);
+  --nav-cta-hover-opacity: 1;
   --nav-menu-bg: rgb(255, 255, 255);
   --nav-menu-line: rgb(8, 10, 13);
 }
@@ -215,6 +238,8 @@
 .themeSolid {
   --nav-bg: rgb(255, 255, 255);
   --nav-link: rgb(8, 10, 13);
+  --nav-careers-hover-bg: rgba(8, 10, 13, 0.06);
+  --nav-careers-hover-color: rgb(8, 10, 13);
   --nav-cta-bg: rgb(23, 23, 23);
   --nav-cta-text: rgb(255, 255, 255);
   --nav-menu-bg: rgb(255, 255, 255);

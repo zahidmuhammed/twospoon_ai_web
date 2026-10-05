@@ -1,7 +1,7 @@
 import styles from "../Home/Home/Home.module.css";
 import { Image } from "../../ui/Image";
 import Link from "next/link";
-import { BookCallButton } from "@/components/BookCall";
+import { BookCallArrow, BookCallButton } from "@/components/BookCall";
 import { UnicornScene } from "@/components/Unicorn";
 
 export const FOOTER_HERO_ID_HOME = "home-footer-hero";
@@ -49,37 +49,15 @@ export function FooterHero({
                   className={styles.white3}
                   data-highlight={"true"}
                   tabIndex={0}
-                  data-framecoded-trigger={"h1bqx8fn"}
-                  data-framecoded-state={"h1bqx8fnsroot"}
                 >
                   <div className={styles.buttonLabel5}>
-                    <p
-                      className={styles.bookCall14}
-                      dir={"auto"}
-                      data-framecoded-state={"h1bqx8fns0_0"}
-                    >
+                    <p className={styles.bookCall14} dir={"auto"}>
                       Book a call
                     </p>
                   </div>
                   <div className={styles.div171} aria-hidden={"true"}>
                     <div className={styles.div1702}>
-                      <svg
-                        className={styles.icon17}
-                        viewBox="0 0 9 9"
-                        width={9}
-                        height={9}
-                        overflow="visible"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M 0 0 L 9 0 L 9 9 M 0 9 L 9 0"
-                          fill="transparent"
-                          stroke="currentColor"
-                          strokeWidth={1.35}
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
+                      <BookCallArrow className={styles.icon17} />
                     </div>
                   </div>
                 </BookCallButton>

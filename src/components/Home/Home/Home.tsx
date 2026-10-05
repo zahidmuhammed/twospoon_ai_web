@@ -8,7 +8,7 @@ import { IndustriesCardsTrack, IndustriesTabProvider } from "../Industries";
 import { NavigationBar } from "../NavigationBar";
 import { AboutUsSection } from "../AboutUsSection";
 import { FaqAccordion } from "../Faq";
-import { BookCallButton } from "@/components/BookCall";
+import { BookCallArrow, BookCallButton } from "@/components/BookCall";
 import { FooterHero } from "@/components/Footer";
 import { UnicornScene } from "@/components/Unicorn";
 
@@ -61,29 +61,15 @@ export function Home() {
                       className={styles.white2}
                       data-highlight={"true"}
                       tabIndex={0}
-                      data-framecoded-trigger={"h1c0wu4m"}
-                      data-framecoded-state={"h1c0wu4msroot"}
                     >
                       <div className={styles.buttonLabel2}>
-                        <p
-                          className={styles.bookCall6}
-                          dir={"auto"}
-                          data-framecoded-state={"h1c0wu4ms0_0"}
-                        >
+                        <p className={styles.bookCall6} dir={"auto"}>
                           Book a call
                         </p>
                       </div>
                       <div className={styles.div17} aria-hidden={"true"}>
                         <div className={styles.div16}>
-                          <span
-                            className={styles.icon2}
-                            data-framecoded-svg="true"
-                            aria-hidden="true"
-                            dangerouslySetInnerHTML={{
-                              __html:
-                                '<svg preserveAspectRatio="none" width="100%" height="100%" style="fill: rgb(0, 0, 0); stroke-width: 1px; stop-color: rgb(0, 0, 0); flood-color: rgb(0, 0, 0); font-family: sans-serif; font-size: 12px; font-weight: 400;"><use href="#svg-707097840_304" style="fill: rgb(0, 0, 0); stroke-width: 1px; stop-color: rgb(0, 0, 0); flood-color: rgb(0, 0, 0); transform-origin: 0px 0px; font-family: sans-serif; font-size: 12px; font-weight: 400;"></use></svg>',
-                            }}
-                          />
+                          <BookCallArrow className={styles.icon2} />
                         </div>
                       </div>
                     </BookCallButton>
